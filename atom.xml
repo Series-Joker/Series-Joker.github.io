@@ -1,41 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>韦阳的博客</title>
+  <title>文涛的博客</title>
   
   <subtitle>算法码上来</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://godweiyang.com/"/>
-  <updated>2020-04-28T07:13:00.187Z</updated>
-  <id>https://godweiyang.com/</id>
+  <link href="https://macherken.site.com/"/>
+  <updated>2020-05-12T12:37:57.414Z</updated>
+  <id>https://macherken.site.com/</id>
   
   <author>
-    <name>韦阳</name>
+    <name>文涛</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>article title</title>
-    <link href="https://godweiyang.com/2020/04/28/article-title/"/>
-    <id>https://godweiyang.com/2020/04/28/article-title/</id>
-    <published>2020-04-28T07:13:00.000Z</published>
-    <updated>2020-04-28T07:13:00.187Z</updated>
+    <title>leecode5</title>
+    <link href="https://macherken.site.com/2020/05/12/leecode5/"/>
+    <id>https://macherken.site.com/2020/05/12/leecode5/</id>
+    <published>2020-05-12T12:34:09.000Z</published>
+    <updated>2020-05-12T12:37:57.414Z</updated>
     
     <summary type="html">
     
+      
+      
+        
+        
+          &lt;h4 id=&quot;题目要求：&quot;&gt;&lt;a href=&quot;#题目要求：&quot; class=&quot;headerlink&quot; title=&quot;题目要求：&quot;&gt;&lt;/a&gt;题目要求：&lt;/h4&gt;&lt;p&gt; 回文串：从左边往右读和从右边往左读是一样的&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Iuput；s =
+        
+      
+    
     </summary>
     
+      <category term="leecode" scheme="https://macherken.site.com/categories/leecode/"/>
+    
+    
+      <category term="leecode" scheme="https://macherken.site.com/tags/leecode/"/>
+    
+      <category term="算法" scheme="https://macherken.site.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leecode4</title>
+    <link href="https://macherken.site.com/2020/05/12/leecode4/"/>
+    <id>https://macherken.site.com/2020/05/12/leecode4/</id>
+    <published>2020-05-12T12:30:12.000Z</published>
+    <updated>2020-05-12T12:33:40.433Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;题目要求：&quot;&gt;&lt;a href=&quot;#题目要求：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="leecode" scheme="https://macherken.site.com/categories/leecode/"/>
+    
+    
+      <category term="leecode" scheme="https://macherken.site.com/tags/leecode/"/>
+    
+      <category term="算法" scheme="https://macherken.site.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leecode刷题</title>
+    <link href="https://macherken.site.com/2020/05/12/leecode1/"/>
+    <id>https://macherken.site.com/2020/05/12/leecode1/</id>
+    <published>2020-05-12T12:12:36.000Z</published>
+    <updated>2020-05-12T12:23:06.234Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;难度：简单&quot;&gt;&lt;a href=&quot;#难度：简单&quot; class=&quot;headerlink&quot; title=&quot;难度：简单&quot;&gt;&lt;/a&gt;难度：简单&lt;/h4&gt;&lt;h5 id=&quot;题目要求：&quot;&gt;&lt;a href=&quot;#题目要求：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="leecode" scheme="https://macherken.site.com/categories/leecode/"/>
+    
+    
+      <category term="leecode" scheme="https://macherken.site.com/tags/leecode/"/>
+    
+      <category term="算法" scheme="https://macherken.site.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>十大经典排序算法整理汇总（附代码）</title>
-    <link href="https://godweiyang.com/2020/02/16/sort-algorithms/"/>
-    <id>https://godweiyang.com/2020/02/16/sort-algorithms/</id>
+    <link href="https://macherken.site.com/2020/02/16/sort-algorithms/"/>
+    <id>https://macherken.site.com/2020/02/16/sort-algorithms/</id>
     <published>2020-02-16T07:09:23.000Z</published>
-    <updated>2020-04-04T11:43:42.000Z</updated>
+    <updated>2020-05-12T06:40:32.037Z</updated>
     
     <summary type="html">
     
@@ -43,22 +114,20 @@
       
         
         
-          &lt;blockquote&gt;
-&lt;p&gt;关注公众号【算法码上来】，每日算法干货马上就来！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/medias/contact.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot;
+          &lt;p&gt;前言&lt;/p&gt;
+&lt;p&gt;本文整理并总结了十大经典的排序算法（冒泡排序、选择排序、插入排序、快速排序、归并排序、希尔排序、计数排序、基数排序、桶排序、堆排序）的时间复杂度、空间复杂度等性质。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本文并不会详细讲解每种排序算法的原理&lt;/strong&gt;，网
         
       
     
     </summary>
     
-      <category term="编程算法" scheme="https://godweiyang.com/categories/%E7%BC%96%E7%A8%8B%E7%AE%97%E6%B3%95/"/>
+      <category term="编程算法" scheme="https://macherken.site.com/categories/%E7%BC%96%E7%A8%8B%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="leetcode" scheme="https://godweiyang.com/tags/leetcode/"/>
+      <category term="算法" scheme="https://macherken.site.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="算法" scheme="https://godweiyang.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="leetcode" scheme="https://macherken.site.com/tags/leetcode/"/>
     
   </entry>
   
