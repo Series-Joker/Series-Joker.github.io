@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://macherken.site.com/2020/05/12/django1/</loc>
+    
+    <lastmod>2020-05-12T12:51:50.532Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/12/leecode1/</loc>
+    
+    <lastmod>2020-05-12T12:40:57.142Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://macherken.site.com/2020/05/12/leecode5/</loc>
     
     <lastmod>2020-05-12T12:37:57.414Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://macherken.site.com/2020/05/12/leecode4/</loc>
     
     <lastmod>2020-05-12T12:33:40.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://macherken.site.com/2020/05/12/leecode1/</loc>
-    
-    <lastmod>2020-05-12T12:23:06.234Z</lastmod>
     
   </url>
   

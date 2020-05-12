@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://macherken.site.com/"/>
-  <updated>2020-05-12T12:37:57.414Z</updated>
+  <updated>2020-05-12T12:51:50.532Z</updated>
   <id>https://macherken.site.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>django1</title>
+    <link href="https://macherken.site.com/2020/05/12/django1/"/>
+    <id>https://macherken.site.com/2020/05/12/django1/</id>
+    <published>2020-05-12T12:44:02.000Z</published>
+    <updated>2020-05-12T12:51:50.532Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;1.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在数据迁移是遇到这个错误，解决方法是：因为应用都放在apps下，发生错误的原因是找不到对应的包，解决方法：apps文件夹右键找到Make Direcoory as
+        
+      
+    
+    </summary>
+    
+      <category term="django" scheme="https://macherken.site.com/categories/django/"/>
+    
+    
+      <category term="django" scheme="https://macherken.site.com/tags/django/"/>
+    
+  </entry>
   
   <entry>
     <title>leecode5</title>
@@ -78,7 +105,7 @@
     <link href="https://macherken.site.com/2020/05/12/leecode1/"/>
     <id>https://macherken.site.com/2020/05/12/leecode1/</id>
     <published>2020-05-12T12:12:36.000Z</published>
-    <updated>2020-05-12T12:23:06.234Z</updated>
+    <updated>2020-05-12T12:40:57.142Z</updated>
     
     <summary type="html">
     
