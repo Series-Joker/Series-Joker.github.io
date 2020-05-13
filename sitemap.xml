@@ -2,30 +2,205 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://macherken.site.com/2020/05/12/django1/</loc>
+    <loc>https://macherken.site.com/2020/05/13/numpy/</loc>
     
-    <lastmod>2020-05-12T12:51:50.532Z</lastmod>
+    <lastmod>2020-05-13T04:06:05.897Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://macherken.site.com/2020/05/12/leecode1/</loc>
+    <loc>https://macherken.site.com/2020/05/13/slice/</loc>
     
-    <lastmod>2020-05-12T12:40:57.142Z</lastmod>
+    <lastmod>2020-05-13T03:53:59.375Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/opencv4/</loc>
+    
+    <lastmod>2020-05-13T03:53:38.339Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/opencv3/</loc>
+    
+    <lastmod>2020-05-13T03:53:24.948Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/opencv1/</loc>
+    
+    <lastmod>2020-05-13T03:53:13.409Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/opencv2/</loc>
+    
+    <lastmod>2020-05-13T03:52:59.633Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/ml13/</loc>
+    
+    <lastmod>2020-05-13T03:52:35.727Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/ml12/</loc>
+    
+    <lastmod>2020-05-13T03:52:17.042Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/ml11/</loc>
+    
+    <lastmod>2020-05-13T03:52:03.860Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/ml10/</loc>
+    
+    <lastmod>2020-05-13T03:51:39.127Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/ml9/</loc>
+    
+    <lastmod>2020-05-13T03:51:15.460Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/ml8/</loc>
+    
+    <lastmod>2020-05-13T03:51:04.428Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/ml7/</loc>
+    
+    <lastmod>2020-05-13T03:50:42.895Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/ml6/</loc>
+    
+    <lastmod>2020-05-13T03:50:14.762Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/ml5/</loc>
+    
+    <lastmod>2020-05-13T03:49:55.386Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/ml4/</loc>
+    
+    <lastmod>2020-05-13T03:49:27.866Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/ml3/</loc>
+    
+    <lastmod>2020-05-13T03:49:11.884Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/ml2/</loc>
+    
+    <lastmod>2020-05-13T03:48:45.741Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/ml1/</loc>
+    
+    <lastmod>2020-05-13T03:48:25.472Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/linux1/</loc>
+    
+    <lastmod>2020-05-13T03:48:05.053Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://macherken.site.com/2020/05/12/leecode5/</loc>
     
-    <lastmod>2020-05-12T12:37:57.414Z</lastmod>
+    <lastmod>2020-05-13T03:47:56.395Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://macherken.site.com/2020/05/12/leecode4/</loc>
     
-    <lastmod>2020-05-12T12:33:40.433Z</lastmod>
+    <lastmod>2020-05-13T03:47:39.909Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/12/leecode1/</loc>
+    
+    <lastmod>2020-05-13T03:46:57.941Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/go1/</loc>
+    
+    <lastmod>2020-05-13T03:46:18.630Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/dl2/</loc>
+    
+    <lastmod>2020-05-13T03:45:58.456Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/dl1/</loc>
+    
+    <lastmod>2020-05-13T03:45:33.572Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/12/django1/</loc>
+    
+    <lastmod>2020-05-13T03:45:10.008Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/bigdata1/</loc>
+    
+    <lastmod>2020-05-13T03:44:51.761Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/2020/05/13/pandas/</loc>
+    
+    <lastmod>2020-05-13T01:32:54.979Z</lastmod>
     
   </url>
   
@@ -72,14 +247,14 @@
   </url>
   
   <url>
-    <loc>https://macherken.site.com/categories/index.html</loc>
+    <loc>https://macherken.site.com/friends/index.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://macherken.site.com/friends/index.html</loc>
+    <loc>https://macherken.site.com/categories/index.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
     

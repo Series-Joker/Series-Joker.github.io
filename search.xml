@@ -4,11 +4,640 @@
   
     
     <entry>
-      <title>django1</title>
+      <title>numpy</title>
+      <link href="/2020/05/13/numpy/"/>
+      <url>/2020/05/13/numpy/</url>
+      
+        <content type="html"><![CDATA[<h2 id="NumPy-简介"><a href="#NumPy-简介" class="headerlink" title="NumPy - 简介"></a>NumPy - 简介</h2><p>NumPy 是一个 Python 包。 它代表 “Numeric Python”。 它是一个由多维数组对象和用于处理数组的例程集合组成的库。</p><p><strong>Numeric</strong>，即 NumPy 的前身，是由 Jim Hugunin 开发的。 也开发了另一个包 Numarray ，它拥有一些额外的功能。 2005年，Travis Oliphant 通过将 Numarray 的功能集成到 Numeric 包中来创建 NumPy 包。 这个开源项目有很多贡献者。</p><h2 id="NumPy-操作"><a href="#NumPy-操作" class="headerlink" title="NumPy 操作"></a>NumPy 操作</h2><p>使用NumPy，开发人员可以执行以下操作：</p><ul><li>数组的算数和逻辑运算。</li><li>傅立叶变换和用于图形操作的例程。</li><li>与线性代数有关的操作。 NumPy 拥有线性代数和随机数生成的内置函数。</li></ul><h2 id="NumPy-–-MatLab-的替代之一"><a href="#NumPy-–-MatLab-的替代之一" class="headerlink" title="NumPy – MatLab 的替代之一"></a>NumPy – MatLab 的替代之一</h2><p>NumPy 通常与 <strong>SciPy</strong>（Scientific Python）和 <strong>Matplotlib</strong>（绘图库）一起使用。 这种组合广泛用于替代 MatLab，是一个流行的技术计算平台。 但是，Python 作为 MatLab 的替代方案，现在被视为一种更加现代和完整的编程语言。</p><p>NumPy 是开源的，这是它的一个额外的优势。</p><h2 id="NumPy-Ndarray-对象"><a href="#NumPy-Ndarray-对象" class="headerlink" title="NumPy - Ndarray 对象"></a>NumPy - Ndarray 对象</h2><p>NumPy 中定义的最重要的对象是称为 <code>ndarray</code> 的 N 维数组类型。 它描述相同类型的元素集合。 可以使用基于零的索引访问集合中的项目。</p><p><code>ndarray</code>中的每个元素在内存中使用相同大小的块。 <code>ndarray</code>中的每个元素是数据类型对象的对象（称为 <code>dtype</code>）。</p><p>从<code>ndarray</code>对象提取的任何元素（通过切片）由一个数组标量类型的 Python 对象表示。 下图显示了<code>ndarray</code>，数据类型对象（<code>dtype</code>）和数组标量类型之间的关系。</p><p>Ndarray</p><p><code>ndarray</code>类的实例可以通过本教程后面描述的不同的数组创建例程来构造。 基本的<code>ndarray</code>是使用 NumPy 中的数组函数创建的，如下所示：</p><pre class="line-numbers language-cpp"><code class="language-cpp">numpy<span class="token punctuation">.</span>array<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>它从任何暴露数组接口的对象，或从返回数组的任何方法创建一个ndarray。</p><pre class="line-numbers language-python"><code class="language-python">numpy<span class="token punctuation">.</span>array<span class="token punctuation">(</span>object<span class="token punctuation">,</span> dtype <span class="token operator">=</span> None<span class="token punctuation">,</span> copy <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">,</span> order <span class="token operator">=</span> None<span class="token punctuation">,</span> subok <span class="token operator">=</span> <span class="token boolean">False</span><span class="token punctuation">,</span> ndmin <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>上面的构造器接受以下参数：</p><table><thead><tr><th>1.</th><th><code>object</code> 任何暴露数组接口方法的对象都会返回一个数组或任何（嵌套）序列。</th></tr></thead><tbody><tr><td>2.</td><td><code>dtype</code> 数组的所需数据类型，可选。</td></tr><tr><td>3.</td><td><code>copy</code> 可选，默认为<code>true</code>，对象是否被复制。</td></tr><tr><td>4.</td><td><code>order</code> <code>C</code>（按行）、<code>F</code>（按列）或<code>A</code>（任意，默认）。</td></tr><tr><td>5.</td><td><code>subok</code> 默认情况下，返回的数组被强制为基类数组。 如果为<code>true</code>，则返回子类。</td></tr><tr><td>6.</td><td><code>ndmin</code> 指定返回数组的最小维数。</td></tr></tbody></table><h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例 1"></a>示例 1</h4><pre><code>import numpy as np a = np.array([1,2,3])  print a#输出 [1, 2, 3]</code></pre><h4 id="示例-2"><a href="#示例-2" class="headerlink" title="示例 2"></a>示例 2</h4><pre><code># 多于一个维度  import numpy as np a = np.array([[1,  2],  [3,  4]])  print a#输出     [[1, 2]       [3, 4]]</code></pre><h4 id="示例-3"><a href="#示例-3" class="headerlink" title="示例 3"></a>示例 3</h4><pre><code># 最小维度  import numpy as np a = np.array([1,  2,  3,4,5], ndmin =  2)  print a# 输出    [[1, 2, 3, 4, 5]]</code></pre><h4 id="示例-4"><a href="#示例-4" class="headerlink" title="示例 4"></a>示例 4</h4><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property"># dtype 参数  </span>import numpy as np a <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token function">array</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span>  <span class="token number">2</span><span class="token punctuation">,</span>  <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype <span class="token operator">=</span> complex<span class="token punctuation">)</span>  print a#输出 <span class="token punctuation">[</span> <span class="token number">1</span><span class="token punctuation">.</span><span class="token operator">+</span><span class="token number">0</span><span class="token punctuation">.</span>j<span class="token punctuation">,</span>  <span class="token number">2</span><span class="token punctuation">.</span><span class="token operator">+</span><span class="token number">0</span><span class="token punctuation">.</span>j<span class="token punctuation">,</span>  <span class="token number">3</span><span class="token punctuation">.</span><span class="token operator">+</span><span class="token number">0</span><span class="token punctuation">.</span>j<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>*<em>ndarray *</em> 对象由计算机内存中的一维连续区域组成，带有将每个元素映射到内存块中某个位置的索引方案。 内存块以按行（C 风格）或按列（FORTRAN 或 MatLab 风格）的方式保存元素。</p><h2 id="NumPy-数据类型"><a href="#NumPy-数据类型" class="headerlink" title="NumPy - 数据类型"></a>NumPy - 数据类型</h2><table><thead><tr><th align="left">序号</th><th align="left">数据类型及描述</th></tr></thead><tbody><tr><td align="left">1.</td><td align="left"><code>bool_</code> 存储为一个字节的布尔值（真或假）</td></tr><tr><td align="left">2.</td><td align="left"><code>int_</code> 默认整数，相当于 C 的<code>long</code>，通常为<code>int32</code>或<code>int64</code></td></tr><tr><td align="left">3.</td><td align="left"><code>intc</code> 相当于 C 的<code>int</code>，通常为<code>int32</code>或<code>int64</code></td></tr><tr><td align="left">4.</td><td align="left"><code>intp</code> 用于索引的整数，相当于 C 的<code>size_t</code>，通常为<code>int32</code>或<code>int64</code></td></tr><tr><td align="left">5.</td><td align="left"><code>int8</code> 字节（-128 ~ 127）</td></tr><tr><td align="left">6.</td><td align="left"><code>int16</code> 16 位整数（-32768 ~ 32767）</td></tr><tr><td align="left">7.</td><td align="left"><code>int32</code> 32 位整数（-2147483648 ~ 2147483647）</td></tr><tr><td align="left">8.</td><td align="left"><code>int64</code> 64 位整数（-9223372036854775808 ~ 9223372036854775807）</td></tr><tr><td align="left">9.</td><td align="left"><code>uint8</code> 8 位无符号整数（0 ~ 255）</td></tr><tr><td align="left">10.</td><td align="left"><code>uint16</code> 16 位无符号整数（0 ~ 65535）</td></tr><tr><td align="left">11.</td><td align="left"><code>uint32</code> 32 位无符号整数（0 ~ 4294967295）</td></tr><tr><td align="left">12.</td><td align="left"><code>uint64</code> 64 位无符号整数（0 ~ 18446744073709551615）</td></tr><tr><td align="left">13.</td><td align="left"><code>float_</code> <code>float64</code>的简写</td></tr><tr><td align="left">14.</td><td align="left"><code>float16</code> 半精度浮点：符号位，5 位指数，10 位尾数</td></tr><tr><td align="left">15.</td><td align="left"><code>float32</code> 单精度浮点：符号位，8 位指数，23 位尾数</td></tr><tr><td align="left">16.</td><td align="left"><code>float64</code> 双精度浮点：符号位，11 位指数，52 位尾数</td></tr><tr><td align="left">17.</td><td align="left"><code>complex_</code> <code>complex128</code>的简写</td></tr><tr><td align="left">18.</td><td align="left"><code>complex64</code> 复数，由两个 32 位浮点表示（实部和虚部）</td></tr><tr><td align="left">19.</td><td align="left"><code>complex128</code> 复数，由两个 64 位浮点表示（实部和虚部）</td></tr></tbody></table><p>NumPy 数字类型是<code>dtype</code>（数据类型）对象的实例，每个对象具有唯一的特征。 这些类型可以是<code>np.bool_</code>，<code>np.float32</code>等。</p><h2 id="数据类型对象-dtype"><a href="#数据类型对象-dtype" class="headerlink" title="数据类型对象 (dtype)"></a>数据类型对象 (<code>dtype</code>)</h2><p>数据类型对象描述了对应于数组的固定内存块的解释，取决于以下方面：</p><ul><li>数据类型（整数、浮点或者 Python 对象）</li><li>数据大小</li><li>字节序（小端或大端）</li><li>在结构化类型的情况下，字段的名称，每个字段的数据类型，和每个字段占用的内存块部分。</li><li>如果数据类型是子序列，它的形状和数据类型。</li></ul><p>字节顺序取决于数据类型的前缀<code>&lt;</code>或<code>&gt;</code>。 <code>&lt;</code>意味着编码是小端（最小有效字节存储在最小地址中）。 <code>&gt;</code>意味着编码是大端（最大有效字节存储在最小地址中）。</p><p><code>dtype</code>可由一下语法构造：</p><pre><code>numpy.dtype(object, align, copy)</code></pre><p>参数为：</p><ul><li><code>Object</code>：被转换为数据类型的对象。</li><li><code>Align</code>：如果为<code>true</code>，则向字段添加间隔，使其类似 C 的结构体。</li><li><code>Copy</code> ? 生成<code>dtype</code>对象的新副本，如果为<code>flase</code>，结果是内建数据类型对象的引用。</li></ul><h4 id="示例-1-1"><a href="#示例-1-1" class="headerlink" title="示例 1"></a>示例 1</h4><pre><code># 使用数组标量类型  import numpy as np dt = np.dtype(np.int32)  print dt#输出 int32</code></pre><h4 id="示例-2-1"><a href="#示例-2-1" class="headerlink" title="示例 2"></a>示例 2</h4><pre><code>#int8，int16，int32，int64 可替换为等价的字符串 'i1'，'i2'，'i4'，以及其他。  import numpy as np dt = np.dtype('i4')  print dt #输出 int32</code></pre><h4 id="示例-3-1"><a href="#示例-3-1" class="headerlink" title="示例 3"></a>示例 3</h4><pre><code># 使用端记号  import numpy as np dt = np.dtype('&gt;i4')  print dt# 输出 &gt;i4</code></pre><p>下面的例子展示了结构化数据类型的使用。 这里声明了字段名称和相应的标量数据类型。</p><h4 id="示例-4-1"><a href="#示例-4-1" class="headerlink" title="示例 4"></a>示例 4</h4><pre><code># 首先创建结构化数据类型。  import numpy as np dt = np.dtype([('age',np.int8)])  print dt # 输出 [('age', 'i1')] </code></pre><h4 id="示例-5"><a href="#示例-5" class="headerlink" title="示例 5"></a>示例 5</h4><pre><code># 现在将其应用于 ndarray 对象  import numpy as np dt = np.dtype([('age',np.int8)]) a = np.array([(10,),(20,),(30,)], dtype = dt)  print a# 输出 [(10,) (20,) (30,)]</code></pre><h4 id="示例-6"><a href="#示例-6" class="headerlink" title="示例 6"></a>示例 6</h4><pre><code># 文件名称可用于访问 age 列的内容  import numpy as np dt = np.dtype([('age',np.int8)]) a = np.array([(10,),(20,),(30,)], dtype = dt)  print a['age']# 输出 [10 20 30]</code></pre><h4 id="示例-7"><a href="#示例-7" class="headerlink" title="示例 7"></a>示例 7</h4><pre><code>import numpy as np student = np.dtype([('name','S20'),  ('age',  'i1'),  ('marks',  'f4')]) a = np.array([('abc',  21,  50),('xyz',  18,  75)], dtype = student)  print a# 输出 [('abc', 21, 50.0), ('xyz', 18, 75.0)]</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> numpy </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> numpy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>L1L2正则化</title>
+      <link href="/2020/05/13/ml13/"/>
+      <url>/2020/05/13/ml13/</url>
+      
+        <content type="html"><![CDATA[<h3 id="偏差方差权衡"><a href="#偏差方差权衡" class="headerlink" title="偏差方差权衡"></a>偏差方差权衡</h3><p>降低模型复杂度<br>减少数据维度，降噪<br>增加样本数<br>使用验证集</p><h4 id="岭回归"><a href="#岭回归" class="headerlink" title="岭回归"></a>岭回归</h4><pre><code>import numpy as npimport matplotlib.pyplot as pltfrom sklearn.pipeline import Pipelinefrom sklearn.preprocessing import StandardScaler</code></pre><pre><code>np.random.seed(42)x = np.random.uniform(-3.,3.,size = 100)X = x.reshape(-1,1)y = 0.5 * x + x + 3 + np.random.normal(0,1,size=100)</code></pre><pre><code>plt.scatter(x,y)plt.show()</code></pre><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml13%5C1.png" alt="1"></p><pre><code>from sklearn.linear_model import Ridgefrom sklearn.preprocessing import StandardScalerdef RidgeRe(defree,alpha):    return Pipeline([        ('poly',PolynomialFeatures(defree=defree)),        ('std_scaler',StandardScaler()),        ('ridge_reg',Ridge(alpha=alpha))    ])</code></pre><pre><code>ridge1_reg = RidgeReGRESSION(20,0.0001)ridge1_reg.fit(X,Y)</code></pre><h4 id="LASSO"><a href="#LASSO" class="headerlink" title="LASSO"></a>LASSO</h4><pre><code>from sklearn.linear_model import Lassodef lassoRe(defree,alpha):    return Pipeline([        ('poly',PolynomialFeatures(defree=defree)),        ('std_scaler',StandardScaler()),        ('ridge_reg',Lasso(alpha=alpha))    ])</code></pre><pre><code>lasssol_reg = LassoRegression(20,0.01)lasssol_reg.fit(x,y)lasso_pre = lasssol_reg.predict(x_test)mnean_squared_accury(y_test,lasso_pre)</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ml </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>肺炎预测</title>
+      <link href="/2020/05/13/ml12/"/>
+      <url>/2020/05/13/ml12/</url>
+      
+        <content type="html"><![CDATA[<p>1、什么是SEIR模型</p><p>常见的传染病模型按照传染病类型分为SI、SIR、SIRS、SEIR 模型等，用于研究传染病的传播速度、空间范围、传播途径、动力学机理等问题，<br>以指导对传染病的有效地预防和控制。</p><p>首先介绍S、E、I、R几个重要的参数：</p><p>1、S 类：易感者 (Susceptible)，指未得病者，但缺乏免疫能力，与感染者接触后容易受到感染；在视频中，假设某区域的人口数为10000，<br>那么第一天的S=N-I=9999</p><p>2、E 类：暴露者 (Exposed)，指接触过感染者，但暂无能力传染给其他人的人，对潜伏期长的传染病适用；本例中第一天为0个。</p><p>3、I 类：感病者 (Infectious)，指染上传染病的人，可以传播给 S 类成员，将其变为 E 类或 I 类成员；本例中第一天为1个。</p><p>4、R 类：康复者 (Recovered)，指被隔离或因病愈而具有免疫力的人。如免疫期有限，R 类成员可以重新变为 S 类。本例中第一天为0个。</p><p>接下来看看图中的r、β、γ、α：</p><p>1、r：感染患者（I）每天接触的易感者数目，本例为20</p><p>2、β：传染系数；由疾病本身的传播能力，人群的防控能力决定，本例设置为0.03</p><p>3、γ：恢复系数；一般为病程的倒数，例如流感的病程5天的话，那么它的γ就是1/5，本例设置为0.1</p><p>4、α：潜伏者的发病概率；一般为潜伏期的倒数，本例为0.1</p><p>2、怎么理解SEIR模型</p><p>当dt=1时</p><p>St+1-St=-γβItSt/ N</p><p>Et+1-Et=γβItSt/ N-ɑEt</p><p>It+1-It=ɑEt-γIt</p><p>Rt+1-Rt=γIt</p><p>我们看流程图和公式，dS/dt可以理解为当时间t无限接近0时，S的变化量。当t=1时，dS/dt就是每日S的改变数，<br>其余的dE/dt、dI/dt、dR/dt同理。因为S是从一开始接近N，然后慢慢被感染成E，呈下降变化，所以第一条公式右边是带负号。</p><p>每天有多少S减少由每天发病人群接触人数（r）、传染系数（β）、发病人数的比例（I/N）、<br>易感人群的比例（S/N）、总人数（N）所决定的，所以dS/dt=-r<em>β</em>S/N<em>I/N</em>N=-rβSI/N。<br>那么每天E的改变数量dE/dt就是每天S转化为E的数目（rβSI/N）减去每天E转化为I的数目（rβSI/N-αE）。其余的dI/dt、dR/dt同理。</p><pre><code>import mathimport numpy as npimport matplotlibimport matplotlib.pyplot as pltplt.rcParams['font.sans-serif'] = ['KaiTi']plt.rcParams['axes.unicode_minus'] = Falsedef calc(T):    for i in range(0, len(T) - 1):        S.append(S[i] - r * b * S[i] * I[i] / N )        E.append(E[i] + r * b * S[i] * I[i] / N - a * E[i] )        I.append(I[i] + a * E[i] - y * I[i])        R.append(R[i] + y * I[i])def plot(T,S,E,I,R):    plt.figure()    plt.title("SEIR-病毒传播时间曲线")    plt.plot(T,S,color='r',label='易感者')    plt.plot(T, E, color='k', label='潜伏者')    plt.plot(T, I, color='b', label='传染者')    plt.plot(T, R, color='g', label='康复者')    plt.grid(False)    plt.legend()    plt.xlabel("时间(天)")    plt.ylabel("人数")    plt.show()if __name__ == '__main__':    # 首先还是设置一下参数,之后方便修改    N = 10000 # 人口总数    E = [] # 潜伏携带者    E.append(0)    I = [] # 传染者    I.append(1)    S = [] # 易感者    S.append(N - I[0])    R = [] # 康复者    R.append(0)    r = 20 # 传染者接触人数    b = 0.03 # 传染者传染概率    a = 0.1 # 潜伏者患病概率    y = 0.1 # 康复概率    T = [i for i in range(0, 160)] # 时间    calc(T)    plot(T,S,E,I,R)</code></pre><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml12%5C1.png" alt="1"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ml </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>混淆矩阵</title>
+      <link href="/2020/05/13/ml11/"/>
+      <url>/2020/05/13/ml11/</url>
+      
+        <content type="html"><![CDATA[<pre><code>digits = datasets.load_digits()X = digits.datay = digits.target.copy()</code></pre><pre><code>from sklearn.model_selection import train_test_splitimport matplotlib.pyplot as pltX_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.8)</code></pre><pre><code>from sklearn.linear_model import LogisticRegressionlog_reg = LogisticRegression()log_reg.fit(X_train,y_train)log_reg.score(X_test,y_test)# 0.9408901251738526</code></pre><pre><code>y_predict = log_reg.predict(X_test)</code></pre><pre><code>precision_score(y_test,y_predict,average='micro')# 0.9408901251738526</code></pre><pre><code>from sklearn.metrics import confusion_matrixconfusion_matrix(y_test,y_predict)</code></pre><pre><code>array([[137,   0,   0,   0,   1,   1,   0,   0,   0,   0],       [  0, 128,   0,   1,   0,   0,   3,   0,   2,   1],       [  0,   0, 142,   2,   0,   0,   0,   0,   3,   0],       [  0,   0,   2, 131,   0,   0,   0,   1,   8,   2],       [  0,   6,   0,   0, 138,   0,   0,   2,   1,   1],       [  0,   1,   1,   0,   1, 144,   1,   0,   1,   4],       [  1,   0,   0,   0,   1,   0, 144,   0,   2,   0],       [  0,   0,   0,   0,   1,   0,   0, 134,   4,   6],       [  1,   8,   2,   2,   1,   0,   0,   2, 124,   1],       [  0,   2,   0,   0,   0,   1,   0,   0,   4, 131]], dtype=int64)</code></pre><pre><code>cfm = confusion_matrix(y_test,y_predict)plt.matshow(cfm,cmap=plt.cm.gray)plt.show()</code></pre><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml11%5C1.png" alt="1"></p><pre><code>row = np.sum(cfm,axis=1)err_mat = cfm/ rownp.fill_diagonal(err_mat,0)err_mat</code></pre><pre><code>plt.matshow(err_mat,cmap=plt.cm.gray)plt.show()</code></pre><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml11%5C2.png" alt="2"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ml </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>opencv入门五</title>
+      <link href="/2020/05/13/opencv4/"/>
+      <url>/2020/05/13/opencv4/</url>
+      
+        <content type="html"><![CDATA[<pre><code>import tensorflow as tfimport numpy as npimport cv2import random</code></pre><pre><code>img1 = cv2.imread('H:\Jupyter\img1.jpg',1)imgInfo = img1.shapeheight = imgInfo[0]width = imgInfo[1]#canny 1 gray 2 高斯  3 cannygray = cv2.cvtColor(img1,cv2.COLOR_BGR2BGRA)imgG = cv2.GaussianBlur(gray,(3,3),0)dst = cv2.Canny(img1,50,50) # 1 data 2 th 图片卷积运算cv2.imshow('dst',dst)cv2.waitKey()</code></pre><pre><code># sobel 1 算子模板  2 图片卷积  3 阈值判决gray = cv2.cvtColor(img,cv2.COLOR_BGR2BGRA)dst = np.zeros((height,width,1),np.uint8)for i in range(0,height-2):    for j in range(0,width-2):        gy = gray[i,j]*1 + gray[i,j+1]*2 = gray[i,j+2]*1 - gray[i+2,j]*1 - \            gray[i+2,j+1]*2        gx = gray[i,j]*1 + gray[i,j+1]*2 = gray[i,j+2]*1 - gray[i+2,j]*1 - \            gray[i+2,j+1]*2        grad = math.sqrt(gx*gx+gy*gy)        if grad &gt; 50:            dst[i,j] = 255        else:            dst[i,j] = 0cv2.imshow('img',dst)cv2.waitKey(0)</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> opencv </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> opencv </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>opencv入门三</title>
+      <link href="/2020/05/13/opencv3/"/>
+      <url>/2020/05/13/opencv3/</url>
+      
+        <content type="html"><![CDATA[<pre><code>import tensorflow as tfimport numpy as npimport cv2</code></pre><pre><code># 0 -255#灰色图片img = cv2.imread('H:\Jupyter\img1.jpg',1)imgInfo = img.shapeheight = imgInfo[0]width = imgInfo[1]gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)dst = np.zeros((height,wigdth,1),np.uint8)for i in range(0,height):    for j in range(0,width):        grayPixel = gray[i,j]        dst[i,j] = 255-grayPixelcv2.imshow('dst',dst)cv2.waitKey(0)</code></pre><pre><code>#彩色图片# RGB 255-r = NEWr#灰色图片img = cv2.imread('H:\Jupyter\img1.jpg',0)imgInfo = img.shapeheight = imgInfo[0]width = imgInfo[1]dst = np.zeros((height,width,3),np.uint8)for i in range(0,height):    for j in range(0,width):        (b,g,r) = img[i,j]        dst[i,j] = (255-b,255-g,255-r)cv2.imshow('dst',dst)cv2.waitKey(0)</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> opencv </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> opencv </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>opencv入门1</title>
+      <link href="/2020/05/13/opencv2/"/>
+      <url>/2020/05/13/opencv2/</url>
+      
+        <content type="html"><![CDATA[<pre><code># import tensorflow as tsimport numpy as npimport cv2import matplotlib.pyplot as plt</code></pre><h4 id="美颜"><a href="#美颜" class="headerlink" title="美颜"></a>美颜</h4><pre><code>img1 = cv2.imread('H:\Jupyter\img1.jpg',1)dst = cv2.cvtColor(img1,cv2.COLOR_BGR2GRAY)cv2.imshow('dd',dst)cv2.waitKey()</code></pre><pre><code>#灰色图片均衡化img = cv2.imread('H:\Jupyter\img1.jpg',1)gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)cv2.imshow('src',gray)dst = cv2.equalizeHist(gray)cv2.imshow('dsd',dst)cv2.waitKey(0)</code></pre><pre><code>#彩色图片均衡化img = cv2.imread('H:\Jupyter\img1.jpg',1)(b,g,r) = cv2.split(img)bH = cv2.equalizeHist(b)gH = cv2.equalizeHist(g)rH = cv2.equalizeHist(r)result = cv2.merge((bH,gH,rH))  #通道合成cv2.imshow('dsd',result)cv2.waitKey(0)</code></pre><pre><code>#YUV图片均衡化img = cv2.imread('H:\Jupyter\img1.jpg',1)imgYUV = cv2.cvtColor(img,cv2.COLOR_BGR2YCrCb)channleYUV = cv2.split(imgYUV)channleYUV[0] = cv2.equalizeHist(channleYUV[0])channles = cv2.merge(channleYUV)result = cv2.cvtColor(channels,cv2.COLOR_YCrCb2BGR)cv2.imshow('dsd',result)cv2.waitKey(0)</code></pre><h4 id="图片修复"><a href="#图片修复" class="headerlink" title="图片修复"></a>图片修复</h4><pre><code>for i in range(200,300):    img1[i,200] = (255,255,255)    img1[i,200+1] = (255,255,255)    img1[i,200-1] = (255,255,255)for i in range(150,250):    img1[250,i] = (255,255,255)    img1[250,i+1] = (255,255,255)    img1[250,i-1] = (255,255,255)cv2.imwrite('dd.jpg',img1)cv2.imshow('aa',img1)cv2.waitKey(0)</code></pre><pre><code>img = cv2.imread('dd.jpg',1)cv2.imshow('sree',img)cv2.waitKey(0)imgInfo = img.shapeheight = imgInfo[0]width = imgInfo[1]paint = np.zeros((height,width,1),np.uint8)for i in range(200,300):    paint[i,200] = 255    paint[i,200+1] = 255    paint[i,200-1] = 255for i in range(150,250):    paint[250,i] = 255    paint[250,i+1] = 255    paint[250,i-1] = 255cv2.imshow('aa',paint)imgDst = cv2.inpaint(img,paint,3,cv2.INPAINT_TELEA)cv2.imshow('aa',imgDst)cv2.waitKey(0)</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> opencv </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> opencv </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>opencv入门二</title>
+      <link href="/2020/05/13/opencv1/"/>
+      <url>/2020/05/13/opencv1/</url>
+      
+        <content type="html"><![CDATA[<pre><code>import tensorflow as tsimport numpy as npimport cv2# import matplotlib.pyplot as plt</code></pre><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><pre><code>img0 = cv2.imread('H:\Jupyter\img1.jpg',0)img1 = cv2.imread('H:\Jupyter\img1.jpg',1)print(img0.shape)print(img1.shape)cv2.imshow('src',img0)cv2.imshow('src',img1)cv2.waitKey(0)</code></pre><h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><pre><code>img1 = cv2.imread('H:\Jupyter\img1.jpg',1)dst = cv2.cvtColor(img1,cv2.COLOR_BGR2GRAY)cv2.imshow('dd',dst)cv2.waitKey()</code></pre><h4 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h4><pre><code>img1 = cv2.imread('H:\Jupyter\img1.jpg',1)imgInfo = img1.shapeheight = imgInfo[0]width = imgInfo[1]# RGB R = B = G = gray   (r+g+b)/3dst = np.zeros((height,width),np.uint8)for i in range(0,height):    for j in range(0,width):        (b,g,r) = img1[i,j]        gray = (int(b) + int(g) + int(r)) /3        dst[i,j] = np.uint8(gray)cv2.imshow('qq',dst)cv2.waitKey(0)</code></pre><h4 id="方法四"><a href="#方法四" class="headerlink" title="方法四"></a>方法四</h4><pre><code># gray = r*0.229 + g*0.587 + b*0.114img1 = cv2.imread('H:\Jupyter\img1.jpg',1)imgInfo = img1.shapeheight = imgInfo[0]width = imgInfo[1]# RGB R = B = G = gray   (r+g+b)/3dst = np.zeros((height,width),np.uint8)for i in range(0,height):    for j in range(0,width):        (b,g,r) = img1[i,j]        b = int(b)        g = int(g)        r = int(r)        gray = r*0.229 + g*0.587 + b*0.114        dst[i,j] = np.uint8(gray)cv2.imshow('qq',dst)cv2.waitKey(0)</code></pre><pre><code>#灰度优化# gray = r*0.229 + g*0.587 + b*0.114img1 = cv2.imread('H:\Jupyter\img1.jpg',1)imgInfo = img1.shapeheight = imgInfo[0]width = imgInfo[1]# RGB R = B = G = gray   (r+g+b)/3dst = np.zeros((height,width),np.uint8)for i in range(0,height):    for j in range(0,width):        (b,g,r) = img1[i,j]        b = int(b)        g = int(g)        r = int(r)#         gray = (r*1+g*2 + b*1)/4        gray = (r+(g&lt;&lt;1) + b)&gt;&gt;2        dst[i,j] = np.uint8(gray)cv2.imshow('qq',dst)cv2.waitKey(0)</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> opencv </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> opencv </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>集成学习</title>
+      <link href="/2020/05/13/ml10/"/>
+      <url>/2020/05/13/ml10/</url>
+      
+        <content type="html"><![CDATA[<pre><code>import numpy as npimport matplotlib.pyplot as pltimport warningswarnings.filterwarnings</code></pre><pre><code>from sklearn import datasetsX,y = datasets.make_moons(n_samples=500,noise=0.3,random_state=42)</code></pre><pre><code>plt.scatter(X[y==0,0],X[y==0,1])plt.scatter(X[y==1,0],X[y==1,1])plt.show()</code></pre><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml10%5C1.png" alt="1"></p><pre><code>from sklearn.model_selection import train_test_splitX_train,X_test,y_train,y_test = train_test_split(X,y,random_state=666)</code></pre><pre><code>from sklearn.linear_model import LogisticRegressionlog_clf =  LogisticRegression()log_clf.fit(X_train,y_train)log_clf.score(X_test,y_test)</code></pre><pre><code>0.824</code></pre><pre><code>from sklearn.svm import SVCsvm_clf = SVC()svm_clf.fit(X_train,y_train)svm_clf.score(X_test,y_test)</code></pre><pre><code>0.88</code></pre><pre><code>from sklearn.tree import DecisionTreeClassifierdt_clf = DecisionTreeClassifier()dt_clf.fit(X_train,y_train)dt_clf.score(X_test,y_test)</code></pre><pre><code>0.84</code></pre><pre><code>y_predict1 = log_clf.predict(X_test)y_predict2 = svm_clf.predict(X_test)y_predict3 = dt_clf.predict(X_test)</code></pre><pre><code>print(y_predict1)print(y_predict2)print(y_predict3)</code></pre><pre><code>y_predict = np.array((y_predict1 + y_predict2 + y_predict3)) &gt;= 2</code></pre><pre><code>y_predict[:10]#array([ True,  True, False, False, False,  True, False,  True, False,#        True])</code></pre><pre><code>from sklearn.metrics import accuracy_scoreaccuracy_score(y_test,y_predict)</code></pre><pre><code>0.896</code></pre><h2 id="Voting-Classifer"><a href="#Voting-Classifer" class="headerlink" title="Voting Classifer"></a>Voting Classifer</h2><h4 id="少数服从多数"><a href="#少数服从多数" class="headerlink" title="少数服从多数"></a>少数服从多数</h4><pre><code>from sklearn.ensemble import VotingClassifiervot_clf = VotingClassifier(estimators=[    ('log_clf',LogisticRegression()),    ('svm_clf',SVC()),    ('dt_clf',DecisionTreeClassifier(random_state=666))],                          voting='hard'                          )</code></pre><pre><code>vot_clf.fit(X_train,y_train)</code></pre><pre><code>VotingClassifier(estimators=[('log_clf',                              LogisticRegression(C=1.0, class_weight=None,                                                 dual=False, fit_intercept=True,                                                 intercept_scaling=1,                                                 l1_ratio=None, max_iter=100,                                                 multi_class='warn',                                                 n_jobs=None, penalty='l2',                                                 random_state=None,                                                 solver='warn', tol=0.0001,                                                 verbose=0, warm_start=False)),                             ('svm_clf',                              SVC(C=1.0, cache_size=200, class_weight=None,                                  coef0=0.0, decision_f...                             ('dt_clf',                              DecisionTreeClassifier(class_weight=None,                                                     criterion='gini',                                                     max_depth=None,                                                     max_features=None,                                                     max_leaf_nodes=None,                                                     min_impurity_decrease=0.0,                                                     min_impurity_split=None,                                                     min_samples_leaf=1,                                                     min_samples_split=2,                                                     min_weight_fraction_leaf=0.0,                                                     presort=False,                                                     random_state=666,                                                     splitter='best'))],                 flatten_transform=True, n_jobs=None, voting='hard',                 weights=None)</code></pre><pre><code>vot_clf.score(X_test,y_test)# 0.888</code></pre><h2 id="Soft-Voting"><a href="#Soft-Voting" class="headerlink" title="Soft Voting"></a>Soft Voting</h2><pre><code>vot_clf1 = VotingClassifier(estimators=[    ('log_clf',LogisticRegression()),    ('svm_clf',SVC(probability=True)),    ('dt_clf',DecisionTreeClassifier(random_state=666))],                          voting='soft'                          )</code></pre><pre><code>vot_clf1.fit(X_train,y_train)</code></pre><pre><code>VotingClassifier(estimators=[('log_clf',                              LogisticRegression(C=1.0, class_weight=None,                                                 dual=False, fit_intercept=True,                                                 intercept_scaling=1,                                                 l1_ratio=None, max_iter=100,                                                 multi_class='warn',                                                 n_jobs=None, penalty='l2',                                                 random_state=None,                                                 solver='warn', tol=0.0001,                                                 verbose=0, warm_start=False)),                             ('svm_clf',                              SVC(C=1.0, cache_size=200, class_weight=None,                                  coef0=0.0, decision_f...                             ('dt_clf',                              DecisionTreeClassifier(class_weight=None,                                                     criterion='gini',                                                     max_depth=None,                                                     max_features=None,                                                     max_leaf_nodes=None,                                                     min_impurity_decrease=0.0,                                                     min_impurity_split=None,                                                     min_samples_leaf=1,                                                     min_samples_split=2,                                                     min_weight_fraction_leaf=0.0,                                                     presort=False,                                                     random_state=666,                                                     splitter='best'))],                 flatten_transform=True, n_jobs=None, voting='soft',                 weights=None)</code></pre><pre><code>vot_clf1.score(X_test,y_test)# 0.856</code></pre><h3 id="Bagging-放回取样-和Pasting（不放回取样）"><a href="#Bagging-放回取样-和Pasting（不放回取样）" class="headerlink" title="Bagging(放回取样)和Pasting（不放回取样）"></a>Bagging(放回取样)和Pasting（不放回取样）</h3><pre><code>from sklearn.tree import DecisionTreeClassifierfrom sklearn.ensemble import BaggingClassifierbag_clf = BaggingClassifier(DecisionTreeClassifier(),                           n_estimators=500,                            max_samples=100,                            bootstrap=True                           )</code></pre><pre><code>bag_clf.fit(X_train,y_train)</code></pre><pre><code>BaggingClassifier(base_estimator=DecisionTreeClassifier(class_weight=None,                                                        criterion='gini',                                                        max_depth=None,                                                        max_features=None,                                                        max_leaf_nodes=None,                                                        min_impurity_decrease=0.0,                                                        min_impurity_split=None,                                                        min_samples_leaf=1,                                                        min_samples_split=2,                                                        min_weight_fraction_leaf=0.0,                                                        presort=False,                                                        random_state=None,                                                        splitter='best'),                  bootstrap=True, bootstrap_features=False, max_features=1.0,                  max_samples=100, n_estimators=500, n_jobs=None,                  oob_score=False, random_state=None, verbose=0,                  warm_start=False)</code></pre><pre><code>bag_clf.score(X_test,y_test)# 0.872</code></pre><pre><code>bag_clf1 = BaggingClassifier(DecisionTreeClassifier(),                           n_estimators=5000,                            max_samples=100,                            bootstrap=True                           )</code></pre><pre><code>bag_clf1.fit(X_train,y_train)</code></pre><pre><code>BaggingClassifier(base_estimator=DecisionTreeClassifier(class_weight=None,                                                        criterion='gini',                                                        max_depth=None,                                                        max_features=None,                                                        max_leaf_nodes=None,                                                        min_impurity_decrease=0.0,                                                        min_impurity_split=None,                                                        min_samples_leaf=1,                                                        min_samples_split=2,                                                        min_weight_fraction_leaf=0.0,                                                        presort=False,                                                        random_state=None,                                                        splitter='best'),                  bootstrap=True, bootstrap_features=False, max_features=1.0,                  max_samples=100, n_estimators=5000, n_jobs=None,                  oob_score=False, random_state=None, verbose=0,                  warm_start=False)</code></pre><pre><code>bag_clf1.score(X_test,y_test)# 0.872</code></pre><h3 id="OOB-Out-of-Bag"><a href="#OOB-Out-of-Bag" class="headerlink" title="OOB Out-of-Bag"></a>OOB Out-of-Bag</h3><p>放回取样导致一部分样本很有可能没有取到，大约有37%的样本没有取到，不使用测试集数据，而使用这部分样本做测试验证</p><pre><code>bag_clf2 = BaggingClassifier(DecisionTreeClassifier(),                           n_estimators=5000,                            max_samples=100,                            bootstrap=True,                             oob_score=True                           )</code></pre><pre><code>bag_clf2.fit(X,y)</code></pre><pre><code>bag_clf2.oob_score_# 0.918</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ml </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LGB</title>
+      <link href="/2020/05/13/ml9/"/>
+      <url>/2020/05/13/ml9/</url>
+      
+        <content type="html"><![CDATA[<p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml9%5C1.png" alt="1"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml9%5C2.png" alt="2"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml9%5C3.png" alt="3"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml9%5C4.png" alt="4"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml9%5C5.png" alt="5"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml9%5C6.png" alt="6"></p><pre><code>import datetimeimport numpy as npimport pandas as pdimport lightgbm as lgbfrom sklearn.datasets import load_breast_cancerfrom sklearn.model_selection import train_test_splitfrom sklearn.metrics import accuracy_scoreimport matplotlib.pyplot as plt%matplotlib inline</code></pre><pre><code># 加载数据集breast = load_breast_cancer()# 获取特征值和目标指X,y = breast.data,breast.target# 获取特征名称feature_name = breast.feature_names</code></pre><pre><code># 数据集划分X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)</code></pre><pre><code># 数据格式转换lgb_train = lgb.Dataset(X_train, y_train)lgb_eval = lgb.Dataset(X_test, y_test, reference=lgb_train)</code></pre><pre><code># 参数设置boost_round = 50 # 迭代次数              early_stop_rounds = 10 # 验证数据若在early_stop_rounds轮中未提高，则提前停止params = {    'boosting_type': 'gbdt',  # 设置提升类型    'objective': 'regression',  # 目标函数    'metric': {'l2', 'auc'},  # 评估函数    'num_leaves': 31,  # 叶子节点数    'learning_rate': 0.05,  # 学习速率    'feature_fraction': 0.9,  # 建树的特征选择比例    'bagging_fraction': 0.8,  # 建树的样本采样比例    'bagging_freq': 5,  # k 意味着每 k 次迭代执行bagging    'verbose': 1  # &lt;0 显示致命的, =0 显示错误 (警告), &gt;0 显示信息}</code></pre><pre><code>results = {}gbm = lgb.train(params,                lgb_train,                num_boost_round= boost_round,                valid_sets=(lgb_eval, lgb_train),                valid_names=('validate','train'),                early_stopping_rounds = early_stop_rounds,                evals_result= results)</code></pre><pre><code># 模型预测y_pred = gbm.predict(X_test, num_iteration=gbm.best_iteration)y_pred</code></pre><pre><code># 模型评估lgb.plot_metric(results)plt.show()</code></pre><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml9%5C7.png" alt="7"></p><pre><code># 绘制重要的特征lgb.plot_importance(gbm,importance_type = "split")plt.show()</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ml </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2020/05/13/ml8/"/>
+      <url>/2020/05/13/ml8/</url>
+      
+        <content type="html"><![CDATA[<h3 id="XGBoots"><a href="#XGBoots" class="headerlink" title="XGBoots"></a>XGBoots</h3><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml8%5C1.png" alt="1"></p><p>叶节点越多，则决策树越复杂 每个叶子节点输出值的绝对值越大，则决策树月复杂</p><p>Type <em>Markdown</em> and LaTeX: 𝛼2</p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml8%5C2.png" alt="2"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml8%5C3.png" alt="3"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml8%5C4.png" alt="4"></p><p>正则项用来衡量树的复杂度：树的叶子节点个数T和每棵树的叶子节点输出分数W的平方和（相当于L2正则化）<img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml8%5C5.png" alt="5"></p><p>缺失值处理 将特征k的缺失值都放在右子树。枚举划分点，计算最大的gain 将特征值k的缺失值都放在左子树，枚举划分点，计算 最多达的gain 最后求出最大增益，确定缺失值的划分</p><p>为了减少数据排序的时间，采用BLock结构存储格式 OUT-of core 缓存优化：使用缓存与其，将梯度信息放入Buffer中</p><pre><code>import timeimport numpy as npimport xgboost as xgbfrom xgboost import plot_importance,plot_treefrom sklearn.datasets import load_irisfrom sklearn.model_selection import train_test_splitfrom sklearn.metrics import accuracy_scorefrom sklearn.datasets import load_bostonimport matplotlibimport matplotlib.pyplot as pltimport os%matplotlib inline</code></pre><pre><code>#以鸢尾花数据集做例子iris = load_iris()X,y = iris.data,iris.targetX_train,X_test,y_train,y_test = train_test_split(X,y,random_state=123456)</code></pre><pre><code># 训练算法参数设置params = {    # 通用参数    'booster': 'gbtree', # 使用的弱学习器,有两种选择gbtree（默认）和gblinear,gbtree是基于                        # 树模型的提升计算，gblinear是基于线性模型的提升计算    'nthread': 4, # XGBoost运行时的线程数，缺省时是当前系统获得的最大线程数    'silent':0, # 0：表示打印运行时信息，1：表示以缄默方式运行，默认为0    'num_feature':4, # boosting过程中使用的特征维数    'seed': 1000, # 随机数种子    # 任务参数    'objective': 'multi:softmax', # 多分类的softmax,objective用来定义学习任务及相应的损失函数    'num_class': 3, # 类别总数    # 提升参数    'gamma': 0.1, # 叶子节点进行划分时需要损失函数减少的最小值    'max_depth': 6, # 树的最大深度，缺省值为6，可设置其他值    'lambda': 2, # 正则化权重    'subsample': 0.7, # 训练模型的样本占总样本的比例，用于防止过拟合    'colsample_bytree': 0.7, # 建立树时对特征进行采样的比例    'min_child_weight': 3, # 叶子节点继续划分的最小的样本权重和    'eta': 0.1, # 加法模型中使用的收缩步长   }plst = params.items()</code></pre><pre><code>#数据集格式转换dtrain = xgb.DMatrix(X_train,y_train)dtest = xgb.DMatrix(X_test,y_test)</code></pre><pre><code>#num_rounds = 10model = xgb.train(plst,dtrain,num_rounds)</code></pre><pre><code>y_predict = model.predict(dtest)y_predict1 = np.array(y_predict)y_predict1</code></pre><pre><code>#对测试集进行预测accuracy = accuracy_score(y_test,y_predict)accuracy</code></pre><pre><code>0.9736842105263158</code></pre><pre><code>#显示中要特征plot_importance(model)plt.show()</code></pre><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml8%5C6.png" alt="6"></p><pre><code>plot_tree(model,num_trees=5)</code></pre><h2 id="基于XGBoost原生接口的回归问题"><a href="#基于XGBoost原生接口的回归问题" class="headerlink" title="基于XGBoost原生接口的回归问题"></a>基于XGBoost原生接口的回归问题</h2><p>以波士顿房价数据集做例子</p><pre><code>boston = load_boston()X,y = boston.data,boston.targetfeature_name = boston.feature_names</code></pre><pre><code>X_train,X_test,y_train,y_test = train_test_split(X,y,random_state=123456)</code></pre><pre><code>#参数设置params = {        'booster': 'gbtree',        'objective': 'reg:gamma', # 回归的损失函数，gmma回归        'gamma': 0.1,        'max_depth': 5,        'lambda': 3,        'subsample': 0.7,        'colsample_bytree': 0.7,        'min_child_weight': 3,        'silent': 1,        'eta': 0.1,        'seed': 1000,        'nthread': 4,    }plst = params.items()</code></pre><pre><code>#数据集格式转换dtrain = xgb.DMatrix(X_train,y_train)dtest = xgb.DMatrix(X_test,y_test)</code></pre><pre><code>num_rounds = 30model = xgb.train(plst,dtrain,num_rounds)</code></pre><pre><code>y_predict = model.predict(dtest)</code></pre><pre><code>plot_tree(model,num_trees=17)</code></pre><h2 id="基于sklearrn的接口实现分类"><a href="#基于sklearrn的接口实现分类" class="headerlink" title="基于sklearrn的接口实现分类"></a>基于sklearrn的接口实现分类</h2><pre><code>model = xgb.XGBClassifier(max_depth=5,n_estimator=50,silent=True,objective='muiti:softmax',feature_names=feature_anme)models.fit</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ml </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>算法评价指标</title>
+      <link href="/2020/05/13/ml7/"/>
+      <url>/2020/05/13/ml7/</url>
+      
+        <content type="html"><![CDATA[<pre><code>import numpy as npfrom math import sqrtdef accuracy_score(y_true, y_predict):    """计算y_true和y_predict之间的准确率"""    assert len(y_true) == len(y_predict), \        "the size of y_true must be equal to the size of y_predict"    return np.sum(y_true == y_predict) / len(y_true)def mean_squared_error(y_true, y_predict):    """计算y_true和y_predict之间的MSE"""    assert len(y_true) == len(y_predict), \        "the size of y_true must be equal to the size of y_predict"    return np.sum((y_true - y_predict)**2) / len(y_true)def root_mean_squared_error(y_true, y_predict):    """计算y_true和y_predict之间的RMSE"""    return sqrt(mean_squared_error(y_true, y_predict))def mean_absolute_error(y_true, y_predict):    """计算y_true和y_predict之间的RMSE"""    assert len(y_true) == len(y_predict), \        "the size of y_true must be equal to the size of y_predict"    return np.sum(np.absolute(y_true - y_predict)) / len(y_true)def r2_score(y_true, y_predict):    """计算y_true和y_predict之间的R Square"""    return 1 - mean_squared_error(y_true, y_predict)/np.var(y_true)</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ml </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>KNN</title>
+      <link href="/2020/05/13/ml6/"/>
+      <url>/2020/05/13/ml6/</url>
+      
+        <content type="html"><![CDATA[<pre><code>import numpy as npfrom math import sqrtfrom collections import Counterfrom .metrics import accuracy_scoreclass KNNClassifier:    def __init__(self, k):        """初始化kNN分类器"""        assert k &gt;= 1, "k must be valid"        self.k = k        self._X_train = None        self._y_train = None    def fit(self, X_train, y_train):        """根据训练数据集X_train和y_train训练kNN分类器"""        assert X_train.shape[0] == y_train.shape[0], \            "the size of X_train must be equal to the size of y_train"        assert self.k &lt;= X_train.shape[0], \            "the size of X_train must be at least k."        self._X_train = X_train        self._y_train = y_train        return self    def predict(self, X_predict):        """给定待预测数据集X_predict，返回表示X_predict的结果向量"""        assert self._X_train is not None and self._y_train is not None, \                "must fit before predict!"        assert X_predict.shape[1] == self._X_train.shape[1], \                "the feature number of X_predict must be equal to X_train"        y_predict = [self._predict(x) for x in X_predict]        return np.array(y_predict)    def _predict(self, x):        """给定单个待预测数据x，返回x的预测结果值"""        assert x.shape[0] == self._X_train.shape[1], \            "the feature number of x must be equal to X_train"        distances = [sqrt(np.sum((x_train - x) ** 2))                     for x_train in self._X_train]        nearest = np.argsort(distances)        topK_y = [self._y_train[i] for i in nearest[:self.k]]        votes = Counter(topK_y)        return votes.most_common(1)[0][0]    def score(self, X_test, y_test):        """根据测试数据集 X_test 和 y_test 确定当前模型的准确度"""        y_predict = self.predict(X_test)        return accuracy_score(y_test, y_predict)    def __repr__(self):        return "KNN(k=%d)" % self.k</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ml </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SimpleLinerRegression</title>
+      <link href="/2020/05/13/ml5/"/>
+      <url>/2020/05/13/ml5/</url>
+      
+        <content type="html"><![CDATA[<pre><code>import numpy as npfrom .metrics import r2_scoreclass SimpleLinearRegression:    def __init__(self):        """初始化Simple Linear Regression模型"""        self.a_ = None        self.b_ = None    def fit(self, x_train, y_train):        """根据训练数据集x_train, y_train训练Simple Linear Regression模型"""        assert x_train.ndim == 1, \            "Simple Linear Regressor can only solve single feature training data."        assert len(x_train) == len(y_train), \            "the size of x_train must be equal to the size of y_train"        x_mean = np.mean(x_train)        y_mean = np.mean(y_train)        self.a_ = (x_train - x_mean).dot(y_train - y_mean) / (x_train - x_mean).dot(x_train - x_mean)        self.b_ = y_mean - self.a_ * x_mean        return self    def predict(self, x_predict):        """给定待预测数据集x_predict，返回表示x_predict的结果向量"""        assert x_predict.ndim == 1, \            "Simple Linear Regressor can only solve single feature training data."        assert self.a_ is not None and self.b_ is not None, \            "must fit before predict!"        return np.array([self._predict(x) for x in x_predict])    def _predict(self, x_single):        """给定单个待预测数据x，返回x的预测结果值"""        return self.a_ * x_single + self.b_    def score(self, x_test, y_test):        """根据测试数据集 x_test 和 y_test 确定当前模型的准确度"""        y_predict = self.predict(x_test)        return r2_score(y_test, y_predict)    def __repr__(self):        return "SimpleLinearRegression()"</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ml </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PCA降维</title>
+      <link href="/2020/05/13/ml4/"/>
+      <url>/2020/05/13/ml4/</url>
+      
+        <content type="html"><![CDATA[<pre><code>import numpy as npclass PCA:    def __init__(self, n_components):        """初始化PCA"""        assert n_components &gt;= 1, "n_components must be valid"        self.n_components = n_components        self.components_ = None    def fit(self, X, eta=0.01, n_iters=1e4):        """获得数据集X的前n个主成分"""        assert self.n_components &lt;= X.shape[1], \            "n_components must not be greater than the feature number of X"        def demean(X):            return X - np.mean(X, axis=0)        def f(w, X):            return np.sum((X.dot(w) ** 2)) / len(X)        def df(w, X):            return X.T.dot(X.dot(w)) * 2. / len(X)        def direction(w):            return w / np.linalg.norm(w)        def first_component(X, initial_w, eta=0.01, n_iters=1e4, epsilon=1e-8):            w = direction(initial_w)            cur_iter = 0            while cur_iter &lt; n_iters:                gradient = df(w, X)                last_w = w                w = w + eta * gradient                w = direction(w)                if (abs(f(w, X) - f(last_w, X)) &lt; epsilon):                    break                cur_iter += 1            return w        X_pca = demean(X)        self.components_ = np.empty(shape=(self.n_components, X.shape[1]))        for i in range(self.n_components):            initial_w = np.random.random(X_pca.shape[1])            w = first_component(X_pca, initial_w, eta, n_iters)            self.components_[i,:] = w            X_pca = X_pca - X_pca.dot(w).reshape(-1, 1) * w        return self    def transform(self, X):        """将给定的X，映射到各个主成分分量中"""        assert X.shape[1] == self.components_.shape[1]        return X.dot(self.components_.T)    def inverse_transform(self, X):        """将给定的X，反向映射回原来的特征空间"""        assert X.shape[1] == self.components_.shape[0]        return X.dot(self.components_)    def __repr__(self):        return "PCA(n_components=%d)" % self.n_components</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ml </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>LinerRegression</title>
+      <link href="/2020/05/13/ml3/"/>
+      <url>/2020/05/13/ml3/</url>
+      
+        <content type="html"><![CDATA[<pre><code>import numpy as npfrom .metrics import r2_scoreclass LinearRegression:    def __init__(self):        """初始化Linear Regression模型"""        self.coef_ = None        self.intercept_ = None        self._theta = None    def fit_normal(self, X_train, y_train):        """根据训练数据集X_train, y_train训练Linear Regression模型"""        assert X_train.shape[0] == y_train.shape[0], \            "the size of X_train must be equal to the size of y_train"        X_b = np.hstack([np.ones((len(X_train), 1)), X_train])        self._theta = np.linalg.inv(X_b.T.dot(X_b)).dot(X_b.T).dot(y_train)        self.intercept_ = self._theta[0]        self.coef_ = self._theta[1:]        return self    def fit_gd(self, X_train, y_train, eta=0.01, n_iters=1e4):        """根据训练数据集X_train, y_train, 使用梯度下降法训练Linear Regression模型"""        assert X_train.shape[0] == y_train.shape[0], \            "the size of X_train must be equal to the size of y_train"        def J(theta, X_b, y):            try:                return np.sum((y - X_b.dot(theta)) ** 2) / len(y)            except:                return float('inf')        def dJ(theta, X_b, y):            # res = np.empty(len(theta))            # res[0] = np.sum(X_b.dot(theta) - y)            # for i in range(1, len(theta)):            #     res[i] = (X_b.dot(theta) - y).dot(X_b[:, i])            # return res * 2 / len(X_b)            return X_b.T.dot(X_b.dot(theta) - y) * 2. / len(X_b)        def gradient_descent(X_b, y, initial_theta, eta, n_iters=1e4, epsilon=1e-8):            theta = initial_theta            cur_iter = 0            while cur_iter &lt; n_iters:                gradient = dJ(theta, X_b, y)                last_theta = theta                theta = theta - eta * gradient                if (abs(J(theta, X_b, y) - J(last_theta, X_b, y)) &lt; epsilon):                    break                cur_iter += 1            return theta        X_b = np.hstack([np.ones((len(X_train), 1)), X_train])        initial_theta = np.zeros(X_b.shape[1])        self._theta = gradient_descent(X_b, y_train, initial_theta, eta, n_iters)        self.intercept_ = self._theta[0]        self.coef_ = self._theta[1:]        return self    def fit_sgd(self, X_train, y_train, n_iters=5, t0=5, t1=50):        """根据训练数据集X_train, y_train, 使用梯度下降法训练Linear Regression模型"""        assert X_train.shape[0] == y_train.shape[0], \            "the size of X_train must be equal to the size of y_train"        assert n_iters &gt;= 1        def dJ_sgd(theta, X_b_i, y_i):            return X_b_i * (X_b_i.dot(theta) - y_i) * 2.        def sgd(X_b, y, initial_theta, n_iters, t0=5, t1=50):            def learning_rate(t):                return t0 / (t + t1)            theta = initial_theta            m = len(X_b)            for cur_iter in range(n_iters):                indexes = np.random.permutation(m)                X_b_new = X_b[indexes]                y_new = y[indexes]                for i in range(m):                    gradient = dJ_sgd(theta, X_b_new[i], y_new[i])                    theta = theta - learning_rate(cur_iter * m + i) * gradient            return theta        X_b = np.hstack([np.ones((len(X_train), 1)), X_train])        initial_theta = np.random.randn(X_b.shape[1])        self._theta = sgd(X_b, y_train, initial_theta, n_iters, t0, t1)        self.intercept_ = self._theta[0]        self.coef_ = self._theta[1:]        return self    def predict(self, X_predict):        """给定待预测数据集X_predict，返回表示X_predict的结果向量"""        assert self.intercept_ is not None and self.coef_ is not None, \            "must fit before predict!"        assert X_predict.shape[1] == len(self.coef_), \            "the feature number of X_predict must be equal to X_train"        X_b = np.hstack([np.ones((len(X_predict), 1)), X_predict])        return X_b.dot(self._theta)    def score(self, X_test, y_test):        """根据测试数据集 X_test 和 y_test 确定当前模型的准确度"""        y_predict = self.predict(X_test)        return r2_score(y_test, y_predict)    def __repr__(self):        return "LinearRegression()"</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ml </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>预测员工离职率</title>
+      <link href="/2020/05/13/ml2/"/>
+      <url>/2020/05/13/ml2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="使用决策树和随机森林预测员工离职率"><a href="#使用决策树和随机森林预测员工离职率" class="headerlink" title="使用决策树和随机森林预测员工离职率"></a>使用决策树和随机森林预测员工离职率</h3><p>我们的任务是帮助人事部门理解员工为何离职, 预测一个员工离职的可能性. 数据来源: <a href="https://www.kaggle.com/ludobenistant/hr-analytics" target="_blank" rel="noopener">https://www.kaggle.com/ludobenistant/hr-analytics</a></p><pre><code>import pandas as pdimport numpy as npimport matplotlib.pyplot as pltimport matplotlib as matplotimport seaborn as sns%matplotlib inline</code></pre><h4 id="数据读取"><a href="#数据读取" class="headerlink" title="数据读取"></a>数据读取</h4><pre><code># 检测是否有缺失数据df.isnull().any()</code></pre><pre><code># 数据的样例df.head()</code></pre><pre><code># 重命名df = df.rename(columns={'satisfaction_level': 'satisfaction',                         'last_evaluation': 'evaluation',                        'number_project': 'projectCount',                        'average_montly_hours': 'averageMonthlyHours',                        'time_spend_company': 'yearsAtCompany',                        'Work_accident': 'workAccident',                        'promotion_last_5years': 'promotion',                        'sales' : 'department',                        'left' : 'turnover'                        })</code></pre><pre><code># 将预测标签‘是否离职’放在第一列front = df['turnover']df.drop(labels=['turnover'], axis=1, inplace = True)df.insert(0, 'turnover', front)df.head()</code></pre><h4 id="数据统计分析"><a href="#数据统计分析" class="headerlink" title="数据统计分析"></a>数据统计分析</h4><pre><code># 共14999个样本，每一个样本中包含10个特征df.shape</code></pre><pre><code># 特征数据类型. df.dtypes</code></pre><pre><code># 离职率turnover_rate = df.turnover.value_counts() / len(df)turnover_rate</code></pre><pre><code># 显示统计数据df.describe()</code></pre><pre><code># 分组的平均数据统计turnover_Summary = df.groupby('turnover')turnover_Summary.mean()</code></pre><pre><code># 相关性矩阵corr = df.corr()sns.heatmap(corr,             xticklabels=corr.columns.values,            yticklabels=corr.columns.values)corr</code></pre><pre><code># 比较离职和未离职员工的满意度emp_population = df['satisfaction'][df['turnover'] == 0].mean()emp_turnover_satisfaction = df[df['turnover']==1]['satisfaction'].mean()print( '未离职员工满意度: ' + str(emp_population))print( '离职员工满意度: ' + str(emp_turnover_satisfaction) )</code></pre><pre><code>未离职员工满意度: 0.666809590479524离职员工满意度: 0.4400980117614114</code></pre><pre><code>from sklearn.metrics import roc_auc_scorefrom sklearn.metrics import classification_reportfrom sklearn.ensemble import RandomForestClassifierfrom sklearn import treefrom sklearn.tree import DecisionTreeClassifierfrom sklearn.tree import export_graphvizfrom sklearn.externals.six import StringIO  from IPython.display import Image  import pydotplus </code></pre><h4 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h4><pre><code># 实例化dtree = tree.DecisionTreeClassifier(    criterion='entropy',    #max_depth=3, # 定义树的深度, 可以用来防止过拟合    min_weight_fraction_leaf=0.01 # 定义叶子节点最少需要包含多少个样本(使用百分比表达), 防止过拟合    )# 训练dtree = dtree.fit(X_train,y_train)# 指标计算dt_roc_auc = roc_auc_score(y_test, dtree.predict(X_test))print ("决策树 AUC = %2.2f" % dt_roc_auc)print(classification_report(y_test, dtree.predict(X_test)))</code></pre><pre><code>决策树 AUC = 0.93              precision    recall  f1-score   support           0       0.97      0.98      0.97      1714           1       0.93      0.89      0.91       536    accuracy                           0.96      2250   macro avg       0.95      0.93      0.94      2250weighted avg       0.96      0.96      0.96      2250</code></pre><h4 id="决策树的特征重要性分析"><a href="#决策树的特征重要性分析" class="headerlink" title="决策树的特征重要性分析"></a>决策树的特征重要性分析</h4><pre><code># 获取特征重要性importances = dtree.feature_importances_# 获取特征名称feat_names = df.drop(['turnover'],axis=1).columns# 排序indices = np.argsort(importances)[::-1]# 绘图plt.figure(figsize=(12,6))plt.title("Feature importances by Decision Tree")plt.bar(range(len(indices)), importances[indices], color='lightblue',  align="center")plt.step(range(len(indices)), np.cumsum(importances[indices]), where='mid', label='Cumulative')plt.xticks(range(len(indices)), feat_names[indices], rotation='vertical',fontsize=14)plt.xlim([-1, len(indices)])plt.show()</code></pre><h4 id="随机森林"><a href="#随机森林" class="headerlink" title="随机森林"></a>随机森林</h4><pre><code># 实例化随机森林rf = RandomForestClassifier(    criterion='entropy',    n_estimators=3,     max_depth=None, # 定义树的深度, 可以用来防止过拟合    min_samples_split=10, # 定义至少多少个样本的情况下才继续分叉    #min_weight_fraction_leaf=0.02 # 定义叶子节点最少需要包含多少个样本(使用百分比表达), 防止过拟合    )# 模型训练rf.fit(X_train, y_train)# 计算指标参数rf_roc_auc = roc_auc_score(y_test, rf.predict(X_test))print ("随机森林 AUC = %2.2f" % rf_roc_auc)print(classification_report(y_test, rf.predict(X_test)))</code></pre><pre><code>随机森林 AUC = 0.97              precision    recall  f1-score   support           0       0.98      0.99      0.99      1714           1       0.97      0.94      0.96       536    accuracy                           0.98      2250   macro avg       0.98      0.97      0.97      2250weighted avg       0.98      0.98      0.98      2250</code></pre><h4 id="ROC曲线"><a href="#ROC曲线" class="headerlink" title="ROC曲线"></a>ROC曲线</h4><pre><code># ROC 图from sklearn.metrics import roc_curve# 计算ROC曲线rf_fpr, rf_tpr, rf_thresholds = roc_curve(y_test, rf.predict_proba(X_test)[:,1])dt_fpr, dt_tpr, dt_thresholds = roc_curve(y_test, dtree.predict_proba(X_test)[:,1])plt.figure()# 随机森林 ROCplt.plot(rf_fpr, rf_tpr, label='Random Forest (area = %0.2f)' % rf_roc_auc)# 决策树 ROCplt.plot(dt_fpr, dt_tpr, label='Decision Tree (area = %0.2f)' % dt_roc_auc)# 绘图plt.xlim([0.0, 1.0])plt.ylim([0.0, 1.05])plt.xlabel('False Positive Rate')plt.ylabel('True Positive Rate')plt.title('ROC Graph')plt.legend(loc="lower right")plt.show()</code></pre><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml2%5C1.png" alt="1"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ml </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>cnn手写数字识别</title>
+      <link href="/2020/05/13/ml1/"/>
+      <url>/2020/05/13/ml1/</url>
+      
+        <content type="html"><![CDATA[<pre><code>import tensorflow as tfimport numpy as npimport randomfrom tensorflow.examples.tutorials.mnist import input_data</code></pre><pre><code>mnist =  input_data.read_data_sets('MNIST_data',one_hot=True)imageIuput = tf.placeholder(tf.float32,[None,784])lableIuput = tf.placeholder(tf.float32,[None,10])#数据维度调整imageInputReshape = tf.reshape(imageIuput,[-1,28,28,1])#卷积w0 = tf.Variable(tf.truncated_normal([5,5,1,32],stddev=0.1))b0 = tf.Variable(tf.constant(0.1,shape=[32]))layer1 = tf.nn.relu(tf.nn.conv2d(imageInputReshape,w0,strides=[1,1,1,1],padding='SAME')+b0)layer1_pool = tf.nn.max_pool(layer1,ksize=[1,4,4,1],strides=[1,4,4,1],padding='SAME')w1 = tf.Variable(tf.truncated_normal([7*7*32,1024],stddev=0.1))b1 = tf.Variable(tf.constant(0.1,shape=[1024]))h_resshape = tf.reshape(layer1_pool,[-1,7*7*32])h1 = tf.nn.relu(tf.matmul(h_reshpe,w1)+b1)W2 = tf.Variable(tf.truncated_normal([1024,10],stddev=0.1))b2 = tf.Variable(tf.constant(0.1,shape=[10]))pred = tf.nn.softmax(tf.matmul(h1,w2)+b2)loss = lableIuput*tf.log(pred)loss1 = 0for i in range(0,100):    for j in range(0,10):        loss1 = loss1 - loss[i.j]loss3 = loss1/100train = tf.train.GradientDescentOptimizer(0.01).minimize(loss)with tf.Session() as sess:    sess.run(tf.global_variables_initializer())    for i in range(100):        images,labels = mnist.train.next_batch(500)        sess.run(train,feed_dict = {imageIuput:images,lableIuput:labels})        pred_test = sess.run(pred,feed_dict={imageIuput:images,lableIuput:labels})        acc = tf.equal(tf.arg_max(pred_test,1),tf.arg_max(mnist.test.labels))        acc_floaat = tf.reduce_mean(tf.cast(acc,tf.float32))        acc_result = sess.run(acc_floaat,feed_dict={imageIuput:mnist.test.images,lableIuput:mnist.test.labels})        print(acc_floaat)</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> dl </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> dl </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>BigData大数据</title>
+      <link href="/2020/05/13/bigdata1/"/>
+      <url>/2020/05/13/bigdata1/</url>
+      
+        <content type="html"><![CDATA[<p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5CBigData1%5C1.png" alt="1"></p><p><strong>Volume：数据量大</strong></p><p><strong>Variety：类型繁多，关联性多</strong></p><p><strong>Velocity：速度快</strong></p><p><strong>Value：    价值密度低</strong></p><h2 id="安装Hadoop"><a href="#安装Hadoop" class="headerlink" title="安装Hadoop"></a><strong>安装Hadoop</strong></h2><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5CBigData1%5C2.png" alt="2"></p><h4 id="安装SSH"><a href="#安装SSH" class="headerlink" title="安装SSH"></a>安装SSH</h4><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5CBigData1%5C3.png" alt="3"></p><h4 id="安装hadoop"><a href="#安装hadoop" class="headerlink" title="安装hadoop"></a>安装hadoop</h4><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5CBigData1%5C4.png" alt="4"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5CBigData1%5C5.png" alt="5"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5CBigData1%5C6.png" alt="6"></p><h2 id="Hadoop"><a href="#Hadoop" class="headerlink" title="Hadoop"></a><strong>Hadoop</strong></h2><p><strong>分布式存储 + 分布式计算平台</strong></p><p><img src="C:%5CUsers%5CMachen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1583929316491.png" alt="1583929316491"></p><p>开源的，可靠地分布式存储技术，可扩展的</p><p>Hadop Commen</p><p>HDFS:分布式文件系统，提高存储量</p><p>Yarn:资源调度</p><p>MapReduce：计算框架</p><h4 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h4><p><strong>1，高可靠性</strong></p><p>​            数据块多副本</p><p>​            重新调度计算</p><p><strong>2，高扩展性</strong></p><p>​            存储/计算资源不够时，可以横向的线性扩展机器</p><p>​            一个集群中包含数以千计的节点</p><p><strong>3，其他</strong></p><p>​            存储在廉价机器上，降低成本</p><p>​            成熟的生态圈</p><h3 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a><strong>HDFS</strong></h3><p><strong>Hadoop Distributed File System</strong></p><p><strong>特点：可扩展性，容错性，海量存储</strong></p><p><strong>将文件切分成指定大小的数据块并以多副本存储在多个机器上</strong></p><p><strong>设计目标：</strong></p><p>​        非常巨大的分布式文件系统</p><p>​        运行在普通廉价的硬件上</p><p>​        以扩展，为用户提高存储服务</p><h4 id="架构"><a href="#架构" class="headerlink" title="架构:"></a>架构:</h4><p>​        1，Master(NameNode/NN)  带N个Slaves(DataNode/DN)</p><p>​            HDFS/YARN/HBASE</p><p>​            2，一个文件会被拆分成多个block</p><h6 id="NameNode"><a href="#NameNode" class="headerlink" title="NameNode:"></a>NameNode:</h6><p>​        负责客户端请求的响应</p><p>​        负责元数据（文件的名称，副本系数，Block存放的DN)的管理</p><h6 id="DataNode"><a href="#DataNode" class="headerlink" title="DataNode:"></a>DataNode:</h6><p>​        存储用户的文件对应的数据块（Block)</p><p>​        要定期向NN发送心跳信息，汇报本身及其所有的Block信息，健康状况</p><p>A typical deployment has a dedicated machine that runs only the NameNode software.</p><p>一台机器上运行一台NameNode</p><p>Each of the other machines in the cluster runs one instance of the DataNode software. The architecture does not preclude running multiple DataNodes on the same machine but in a real deployment that is rarely the case.</p><p>集群中的每台其他计算机都运行DataNode软件的一个实例，该架构你并不排除在一台机器上运行多个DataNode,而在世纪部署中很少出现这种情况 </p><p>HDFS中的文件只能写入一次（追加和截断除外），并且在任何时候都只能具有一个写入器。        </p><p><strong>NameNode + N个DataNode</strong></p><p><strong>nnhe dn是部署在不同的节点上</strong></p><p>支持层级目录</p><p>文件中除最后一个块外的所有块都具有相同的大小，而在添加了对可变长度块的支持后，用户可以在不填充最后一个块的情况下开始新的块，而不用配置的块大小。</p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5CBigData1%5C7.png" alt="7"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5CBigData1%5C8.png" alt="8"></p><h4 id="HDFS上传文件的流程"><a href="#HDFS上传文件的流程" class="headerlink" title="HDFS上传文件的流程"></a>HDFS上传文件的流程</h4><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5CBigData1%5C9.png" alt="9"></p><h2 id="YARN"><a href="#YARN" class="headerlink" title="YARN"></a>YARN</h2><p><strong>负责整个集群资源的管理和调度</strong></p><p><strong>特点：扩展性，容错性，多框架资源统一调度</strong></p><p><strong>MapReduce：Master/Slave 架构。1个JobTracker带多个TaskTracker</strong></p><p><strong>JobTracker：负责资源管理和作业调度</strong></p><p><strong>TaskTracker：</strong></p><p>​        <strong>定期向JT汇报本节点的健康状况，资源使用情况，作业执行情况</strong></p><p>​        <strong>接收来自JT的名：启动任务/杀死任务</strong></p><p><strong>YARN：不同计算框架可以共享同一个HDFS集群上的数据，享受整体的资源调度</strong></p><h4 id="YARN架"><a href="#YARN架" class="headerlink" title="YARN架"></a>YARN架</h4><h4 id="1，ResourceManager：RM"><a href="#1，ResourceManager：RM" class="headerlink" title="1，ResourceManager：RM"></a><em>1，ResourceManager：RM</em></h4><p>​                整个集群同一时间提供服务的RM只有一个，负责集群资源的同意管理和调度</p><p>·                处理客户端的请求：提交一个作业，杀死一个作业</p><p>​                监控NM,一旦某个NM挂了，那么该NM上运行的任务需要告诉我们的AM如            何处理</p><p>​            <strong>2,NodeManager：NM</strong></p><p>​                整个集群中有多个，负责自己本身节点资源灌流和使用</p><p>​                定时向RM汇报本节点的资源使用情况</p><p>​                接收并处理来自RM的各种命令：启动Container</p><p>​                处理来自AM的命令</p><p>​                单个节点的资源管理</p><p>​            <strong>3，ApplicationMaster：AM</strong></p><p>​                每个应用程序对应一个：MR,Spark,负责应用程序的管理</p><p>​                为应用程序向RM申请资源，（core,memory),分配给内部task</p><p>​                需要与NM通信，启动/停止task, task是运行在container里面，AM也是运行在container</p><p>​            <strong>4，Container</strong></p><p>​                封装了CPU,Memory等资源的一个容器</p><p>​                是一个任务运行环境的抽象</p><p>​            <strong>5，Client</strong></p><h2 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a><strong>MapReduce</strong></h2><p><strong>分布式计算框架</strong></p><p><strong>特点：扩展性，容错性，海量数据离线处理</strong></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5CBigData1%5C10.png" alt="10"></p><h4 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念*"></a><strong><em>核心概念*</em></strong></h4><p><strong>Split：交由MapReduce作业来处理的数据块，是MapReduce中最小的计算单元</strong></p><p>​        <strong>HDFS：blocksize 是HDFS中最小的存储单元  128M</strong></p><p>​        <strong>默认情况下：他们是意义对应的</strong></p><p><strong>InputFormat：将我们输入的数据进行分片</strong></p><p><strong>OutputFormat</strong></p><p><strong>Combiner</strong></p><p><strong>Partitioner</strong></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> BigData </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> BidData </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深度学习入门</title>
+      <link href="/2020/05/13/dl2/"/>
+      <url>/2020/05/13/dl2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="图"><a href="#图" class="headerlink" title="图"></a>图</h3><pre><code>tf.get_default_graph()op,sess或者tensor的graph属性</code></pre><h3 id="会话-类"><a href="#会话-类" class="headerlink" title="会话(类)"></a>会话(类)</h3><p>1：运行图的结构</p><p>2：分配资源计算</p><p>3：掌握资源（变量的生命周期，队列，线程）</p><p>tf.Session()一次只能运行一个图</p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cdl2%5C1.png" alt="1"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cdl2%5C2.png" alt="2"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cdl2%5C3.png" alt="3"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cdl2%5C4.png" alt="4"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cdl2%5C5.png" alt="5"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cdl2%5C6.png" alt="6"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ml </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深度学习和机器学习的区别</title>
+      <link href="/2020/05/13/dl1/"/>
+      <url>/2020/05/13/dl1/</url>
+      
+        <content type="html"><![CDATA[<h3 id="深度学习和机器学习的区别"><a href="#深度学习和机器学习的区别" class="headerlink" title="深度学习和机器学习的区别"></a>深度学习和机器学习的区别</h3><p>机器学习                                                                    神经网络</p><p>算法：  分类：神经网络（简单）                         神经网络（深度）</p><p>​                                回归                                            图像：卷积神经网络</p><p>​                                                                                    自然语言处理：循环神经网络</p><p>tensor: 张量</p><p>operation:节点</p><p>grape:图：整个程序的结构</p><p>会话：运算程序的图</p><p>计算密集型                                                        IO密集型</p><p>​                                                                                            </p><p>框架    tensorflow                                                 django，scrapy</p><p>​                                                                                    网页请求</p><p>tensorflow：前端系统：定义程序的图的机构</p><p>​                        后端系统：运算图结构</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ml </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ml </tag>
+            
+            <tag> dl </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>狗语言入门</title>
+      <link href="/2020/05/13/go1/"/>
+      <url>/2020/05/13/go1/</url>
+      
+        <content type="html"><![CDATA[<h3 id="语言优势："><a href="#语言优势：" class="headerlink" title="语言优势："></a><strong>语言优势：</strong></h3><p>1，可直接编译成机器码，不依赖其他库，部署就是人一个文件</p><p>2，静态类型语言</p><p>3，语言层面支持并发</p><p>4，丰富的库</p><p>5，跨平台编译</p><p>6，内嵌C支持</p><h3 id="适合做什么？"><a href="#适合做什么？" class="headerlink" title="适合做什么？"></a><strong>适合做什么？</strong></h3><p>1，服务器日志</p><p>2，分布式系统</p><p>3，网络编程</p><p>4，内存数据库</p><p>5，云平台</p><h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a><strong>封装</strong></h2><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cgo1%5C1.png" alt="1"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cgo1%5C2.png" alt="2"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cgo1%5C3.png" alt="3"></p><h4 id="狗语言没有继承和多态，是通过接口完成的"><a href="#狗语言没有继承和多态，是通过接口完成的" class="headerlink" title="狗语言没有继承和多态，是通过接口完成的*"></a><em>狗语言没有继承和多态，是通过接口完成的*</em></h4><h2 id="函数与闭包"><a href="#函数与闭包" class="headerlink" title="函数与闭包*"></a><strong>函数与闭包*</strong></h2><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cgo1%5C4.png" alt="4"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cgo1%5C5.png" alt="5"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cgo1%5C6.png" alt="6"></p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cgo1%5C7.png" alt="7"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> go </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> go </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>linux</title>
+      <link href="/2020/05/13/linux1/"/>
+      <url>/2020/05/13/linux1/</url>
+      
+        <content type="html"><![CDATA[<p>很多企业都是要求会linux和unix系统，很多开发都在unix系统上进行开发，所有掌握linux命令是必不可少的，建议可以尝试在linux上进行开发，用着用着肯定就记住了，虽说很多运维都记不住全部命令是百度的，但你是要笔试的，不可能查常用命令还是要会的。本文介绍一些linux命令。</p><h4 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a><strong>系统信息</strong></h4><p>arch 显示机器的处理器架构<br>uname -m 显示机器的处理器架构<br>uname -r 显示正在使用的内核版本<br>dmidecode -q 显示硬件系统部件 - (SMBIOS / DMI)<br>hdparm -i /dev/hda 罗列一个磁盘的架构特性<br>hdparm -tT /dev/sda 在磁盘上执行测试性读取操作<br>cat /proc/cpuinfo 显示CPU info的信息<br>cat /proc/interrupts 显示中断<br>cat /proc/meminfo 校验内存使用<br>cat /proc/swaps 显示哪些swap被使用<br>cat /proc/version 显示内核的版本<br>cat /proc/net/dev 显示网络适配器及统计<br>cat /proc/mounts 显示已加载的文件系统<br>lspci -tv 罗列 PCI 设备<br>lsusb -tv 显示 USB 设备<br>date 显示系统日期<br>cal 2007 显示2007年的日历表<br>date 041217002007.00 设置日期和时间 - 月日时分年.秒<br>clock -w 将时间修改保存到 BIOS </p><h4 id="关机-系统的关机、重启以及登出"><a href="#关机-系统的关机、重启以及登出" class="headerlink" title="关机 (系统的关机、重启以及登出 )"></a><strong>关机 (系统的关机、重启以及登出 )</strong></h4><p>shutdown -h now 关闭系统<br>init 0 关闭系统<br>telinit 0 关闭系统<br>shutdown -h hours:minutes &amp; 按预定时间关闭系统<br>shutdown -c 取消按预定时间关闭系统<br>shutdown -r now 重启<br>reboot 重启<br>logout 注销 </p><h4 id="文件和目录"><a href="#文件和目录" class="headerlink" title="文件和目录"></a><strong>文件和目录</strong></h4><p>cd /home 进入 ‘/ home’ 目录’<br>cd .. 返回上一级目录<br>cd ../.. 返回上两级目录<br>cd 进入个人的主目录<br>cd ~user1 进入个人的主目录<br>cd - 返回上次所在的目录<br>pwd 显示工作路径<br>ls 查看目录中的文件<br>ls -F 查看目录中的文件<br>ls -l 显示文件和目录的详细资料<br>ls -a 显示隐藏文件<br>ls <em>[0-9]</em> 显示包含数字的文件名和目录名<br>tree 显示文件和目录由根目录开始的树形结构<br>lstree 显示文件和目录由根目录开始的树形结构<br>mkdir dir1 创建一个叫做 ‘dir1’ 的目录’<br>mkdir dir1 dir2 同时创建两个目录<br>mkdir -p /tmp/dir1/dir2 创建一个目录树<br>rm -f file1 删除一个叫做 ‘file1’ 的文件’<br>rmdir dir1 删除一个叫做 ‘dir1’ 的目录’<br>rm -rf dir1 删除一个叫做 ‘dir1’ 的目录并同时删除其内容<br>rm -rf dir1 dir2 同时删除两个目录及它们的内容<br>mv dir1 new_dir 重命名/移动 一个目录<br>cp file1 file2 复制一个文件<br>cp dir/* . 复制一个目录下的所有文件到当前工作目录<br>cp -a /tmp/dir1 . 复制一个目录到当前工作目录<br>cp -a dir1 dir2 复制一个目录 </p><p>cp -r dir1 dir2 复制一个目录及子目录<br>ln -s file1 lnk1 创建一个指向文件或目录的软链接<br>ln file1 lnk1 创建一个指向文件或目录的物理链接<br>touch -t 0712250000 file1 修改一个文件或目录的时间戳 - (YYMMDDhhmm)<br>file file1 outputs the mime type of the file as text<br>iconv -l 列出已知的编码<br>iconv -f fromEncoding -t toEncoding inputFile &gt; outputFile creates a new from the given input file by assuming it is encoded in fromEncoding and converting it to toEncoding.<br>find . -maxdepth 1 -name *.jpg -print -exec convert “{}” -resize 80x60 “thumbs/{}” ; batch resize files in the current directory and send them to a thumbnails directory (requires convert from Imagemagick) </p><h4 id="文件搜索"><a href="#文件搜索" class="headerlink" title="文件搜索"></a><strong>文件搜索</strong></h4><p>find / -name file1 从 ‘/‘ 开始进入根文件系统搜索文件和目录<br>find / -user user1 搜索属于用户 ‘user1’ 的文件和目录<br>find /home/user1 -name *.bin 在目录 ‘/ home/user1’ 中搜索带有’.bin’ 结尾的文件<br>find /usr/bin -type f -atime +100 搜索在过去100天内未被使用过的执行文件<br>find /usr/bin -type f -mtime -10 搜索在10天内被创建或者修改过的文件<br>find / -name *.rpm -exec chmod 755 ‘{}’ ; 搜索以 ‘.rpm’ 结尾的文件并定义其权限<br>find / -xdev -name *.rpm 搜索以 ‘.rpm’ 结尾的文件，忽略光驱、捷盘等可移动设备<br>locate *.ps 寻找以 ‘.ps’ 结尾的文件 - 先运行 ‘updatedb’ 命令<br>whereis halt 显示一个二进制文件、源码或man的位置<br>which halt 显示一个二进制文件或可执行文件的完整路径 </p><h4 id="挂载一个文件系统"><a href="#挂载一个文件系统" class="headerlink" title="挂载一个文件系统"></a><strong>挂载一个文件系统</strong></h4><p>mount /dev/hda2 /mnt/hda2 挂载一个叫做hda2的盘 - 确定目录 ‘/ mnt/hda2’ 已经存在<br>umount /dev/hda2 卸载一个叫做hda2的盘 - 先从挂载点 ‘/ mnt/hda2’ 退出<br>fuser -km /mnt/hda2 当设备繁忙时强制卸载<br>umount -n /mnt/hda2 运行卸载操作而不写入 /etc/mtab 文件- 当文件为只读或当磁盘写满时非常有用<br>mount /dev/fd0 /mnt/floppy 挂载一个软盘<br>mount /dev/cdrom /mnt/cdrom 挂载一个cdrom或dvdrom<br>mount /dev/hdc /mnt/cdrecorder 挂载一个cdrw或dvdrom<br>mount /dev/hdb /mnt/cdrecorder 挂载一个cdrw或dvdrom<br>mount -o loop file.iso /mnt/cdrom 挂载一个文件或ISO镜像文件<br>mount -t vfat /dev/hda5 /mnt/hda5 挂载一个Windows FAT32文件系统<br>mount /dev/sda1 /mnt/usbdisk 挂载一个usb 捷盘或闪存设备<br>mount -t smbfs -o username=user,password=pass //WinClient/share /mnt/share 挂载一个windows网络共享 </p><h4 id="磁盘空间"><a href="#磁盘空间" class="headerlink" title="磁盘空间"></a><strong>磁盘空间</strong></h4><p>df -h 显示已经挂载的分区列表<br>ls -lSr |more 以尺寸大小排列文件和目录<br>du -sh dir1 估算目录 ‘dir1’ 已经使用的磁盘空间’<br>du -sk * | sort -rn 以容量大小为依据依次显示文件和目录的大小<br>rpm -q -a –qf ‘%10{SIZE}t%{NAME}n’ | sort -k1,1n 以大小为依据依次显示已安装的rpm包所使用的空间 (fedora, redhat类系统)<br>dpkg-query -W -f=’${Installed-Size;10}t${Package}n’ | sort -k1,1n 以大小为依据显示已安装的deb包所使用的空间 (ubuntu, debian类系统) </p><h4 id="用户和群组"><a href="#用户和群组" class="headerlink" title="用户和群组"></a><strong>用户和群组</strong></h4><p>groupadd group_name 创建一个新用户组<br>groupdel group_name 删除一个用户组<br>groupmod -n new_group_name old_group_name 重命名一个用户组<br>useradd -c “Name Surname “ -g admin -d /home/user1 -s /bin/bash user1 创建一个属于 “admin” 用户组的用户<br>useradd user1 创建一个新用户<br>userdel -r user1 删除一个用户 ( ‘-r’ 排除主目录)<br>usermod -c “User FTP” -g system -d /ftp/user1 -s /bin/nologin user1 修改用户属性<br>passwd 修改口令<br>passwd user1 修改一个用户的口令 (只允许root执行)<br>chage -E 2005-12-31 user1 设置用户口令的失效期限<br>pwck 检查 ‘/etc/passwd’ 的文件格式和语法修正以及存在的用户<br>grpck 检查 ‘/etc/passwd’ 的文件格式和语法修正以及存在的群组<br>newgrp group_name 登陆进一个新的群组以改变新创建文件的预设群组 </p><h4 id="文件的权限-使用-“-”-设置权限，使用-“-“-用于取消"><a href="#文件的权限-使用-“-”-设置权限，使用-“-“-用于取消" class="headerlink" title="文件的权限 - 使用 “+” 设置权限，使用 “-“ 用于取消"></a><strong>文件的权限 - 使用 “+” 设置权限，使用 “-“ 用于取消</strong></h4><p>ls -lh 显示权限<br>ls /tmp | pr -T5 -W$COLUMNS 将终端划分成5栏显示<br>chmod ugo+rwx directory1 设置目录的所有人(u)、群组(g)以及其他人(o)以读（r ）、写(w)和执行(x)的权限<br>chmod go-rwx directory1 删除群组(g)与其他人(o)对目录的读写执行权限<br>chown user1 file1 改变一个文件的所有人属性<br>chown -R user1 directory1 改变一个目录的所有人属性并同时改变改目录下所有文件的属性<br>chgrp group1 file1 改变文件的群组<br>chown user1:group1 file1 改变一个文件的所有人和群组属性<br>find / -perm -u+s 罗列一个系统中所有使用了SUID控制的文件<br>chmod u+s /bin/file1 设置一个二进制文件的 SUID 位 - 运行该文件的用户也被赋予和所有者同样的权限<br>chmod u-s /bin/file1 禁用一个二进制文件的 SUID位<br>chmod g+s /home/public 设置一个目录的SGID 位 - 类似SUID ，不过这是针对目录的<br>chmod g-s /home/public 禁用一个目录的 SGID 位<br>chmod o+t /home/public 设置一个文件的 STIKY 位 - 只允许合法所有人删除文件<br>chmod o-t /home/public 禁用一个目录的 STIKY 位 </p><h4 id="文件的特殊属性-使用-“-”-设置权限，使用-“-“-用于取消"><a href="#文件的特殊属性-使用-“-”-设置权限，使用-“-“-用于取消" class="headerlink" title="文件的特殊属性 - 使用 “+” 设置权限，使用 “-“ 用于取消"></a><strong>文件的特殊属性 - 使用 “+” 设置权限，使用 “-“ 用于取消</strong></h4><p>chattr +a file1 只允许以追加方式读写文件<br>chattr +c file1 允许这个文件能被内核自动压缩/解压<br>chattr +d file1 在进行文件系统备份时，dump程序将忽略这个文件<br>chattr +i file1 设置成不可变的文件，不能被删除、修改、重命名或者链接<br>chattr +s file1 允许一个文件被安全地删除<br>chattr +S file1 一旦应用程序对这个文件执行了写操作，使系统立刻把修改的结果写到磁盘<br>chattr +u file1 若文件被删除，系统会允许你在以后恢复这个被删除的文件<br>lsattr 显示特殊的属性 </p><h4 id="打包和压缩文件"><a href="#打包和压缩文件" class="headerlink" title="打包和压缩文件"></a><strong>打包和压缩文件</strong></h4><p>bunzip2 file1.bz2 解压一个叫做 ‘file1.bz2’的文件<br>bzip2 file1 压缩一个叫做 ‘file1’ 的文件<br>gunzip file1.gz 解压一个叫做 ‘file1.gz’的文件<br>gzip file1 压缩一个叫做 ‘file1’的文件<br>gzip -9 file1 最大程度压缩<br>rar a file1.rar test_file 创建一个叫做 ‘file1.rar’ 的包<br>rar a file1.rar file1 file2 dir1 同时压缩 ‘file1’, ‘file2’ 以及目录 ‘dir1’<br>rar x file1.rar 解压rar包<br>unrar x file1.rar 解压rar包<br>tar -cvf archive.tar file1 创建一个非压缩的 tarball<br>tar -cvf archive.tar file1 file2 dir1 创建一个包含了 ‘file1’, ‘file2’ 以及 ‘dir1’的档案文件<br>tar -tf archive.tar 显示一个包中的内容<br>tar -xvf archive.tar 释放一个包<br>tar -xvf archive.tar -C /tmp 将压缩包释放到 /tmp目录下<br>tar -cvfj archive.tar.bz2 dir1 创建一个bzip2格式的压缩包<br>tar -jxvf archive.tar.bz2 解压一个bzip2格式的压缩包<br>tar -cvfz archive.tar.gz dir1 创建一个gzip格式的压缩包<br>tar -zxvf archive.tar.gz 解压一个gzip格式的压缩包<br>zip file1.zip file1 创建一个zip格式的压缩包<br>zip -r file1.zip file1 file2 dir1 将几个文件和目录同时压缩成一个zip格式的压缩包<br>unzip file1.zip 解压一个zip格式压缩包 </p><h4 id="RPM-包-（Fedora-Redhat及类似系统）"><a href="#RPM-包-（Fedora-Redhat及类似系统）" class="headerlink" title="RPM 包 - （Fedora, Redhat及类似系统）"></a><strong>RPM 包 - （Fedora, Redhat及类似系统）</strong></h4><p>rpm -ivh package.rpm 安装一个rpm包<br>rpm -ivh –nodeeps package.rpm 安装一个rpm包而忽略依赖关系警告<br>rpm -U package.rpm 更新一个rpm包但不改变其配置文件<br>rpm -F package.rpm 更新一个确定已经安装的rpm包<br>rpm -e package_name.rpm 删除一个rpm包<br>rpm -qa 显示系统中所有已经安装的rpm包<br>rpm -qa | grep httpd 显示所有名称中包含 “httpd” 字样的rpm包<br>rpm -qi package_name 获取一个已安装包的特殊信息<br>rpm -qg “System Environment/Daemons” 显示一个组件的rpm包<br>rpm -ql package_name 显示一个已经安装的rpm包提供的文件列表<br>rpm -qc package_name 显示一个已经安装的rpm包提供的配置文件列表<br>rpm -q package_name –whatrequires 显示与一个rpm包存在依赖关系的列表<br>rpm -q package_name –whatprovides 显示一个rpm包所占的体积<br>rpm -q package_name –scripts 显示在安装/删除期间所执行的脚本l<br>rpm -q package_name –changelog 显示一个rpm包的修改历史<br>rpm -qf /etc/httpd/conf/httpd.conf 确认所给的文件由哪个rpm包所提供<br>rpm -qp package.rpm -l 显示由一个尚未安装的rpm包提供的文件列表<br>rpm –import /media/cdrom/RPM-GPG-KEY 导入公钥数字证书<br>rpm –checksig package.rpm 确认一个rpm包的完整性<br>rpm -qa gpg-pubkey 确认已安装的所有rpm包的完整性<br>rpm -V package_name 检查文件尺寸、 许可、类型、所有者、群组、MD5检查以及最后修改时间<br>rpm -Va 检查系统中所有已安装的rpm包- 小心使用<br>rpm -Vp package.rpm 确认一个rpm包还未安装<br>rpm2cpio package.rpm | cpio –extract –make-directories <em>bin</em> 从一个rpm包运行可执行文件<br>rpm -ivh /usr/src/redhat/RPMS/<code>arch</code>/package.rpm 从一个rpm源码安装一个构建好的包<br>rpmbuild –rebuild package_name.src.rpm 从一个rpm源码构建一个 rpm 包 </p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>pandas</title>
+      <link href="/2020/05/13/pandas/"/>
+      <url>/2020/05/13/pandas/</url>
+      
+        <content type="html"><![CDATA[<p>pandas和numpy为机器学习和深度学习必不可少的两个库，最基础的两个库，是经常用到的两个库，所以非常重要。</p><h4 id="一、常用功能及函数简介"><a href="#一、常用功能及函数简介" class="headerlink" title="一、常用功能及函数简介"></a><strong>一、常用功能及函数简介</strong></h4><h5 id="包导入"><a href="#包导入" class="headerlink" title="包导入"></a><strong>包导入</strong></h5><p>一般我们需要做如下导入，numpy和pandas一般需要联合使用：</p><pre><code>import pandas as pdimport numpy as np</code></pre><p>本文采用如下缩写：</p><pre><code>df：Pandas DataFrame对象s：  Pandas Series对象</code></pre><h5 id="数据导入"><a href="#数据导入" class="headerlink" title="数据导入"></a><strong>数据导入</strong></h5><p>pd.read_csv(filename)：从CSV文件导入数据<br>pd.read_table(filename)：从限定分隔符的文本文件导入数据<br>pd.read_excel(filename)：从Excel文件导入数据<br>pd.read_sql(query, connection_object)：从SQL表/库导入数据<br>pd.read_json(json_string)：从JSON格式的字符串导入数据<br>pd.read_html(url)：解析URL、字符串或者HTML文件<br>pd.read_clipboard()：从粘贴板获取内容<br>pd.DataFrame(dict)：从字典对象导入数据</p><h5 id="数据导出"><a href="#数据导出" class="headerlink" title="数据导出"></a><strong>数据导出</strong></h5><p>df.to_csv(filename)：导出数据到CSV文件<br>df.to_excel(filename)：导出数据到Excel文件<br>df.to_sql(table_name, connection_object)：导出数据到SQL表<br>df.to_json(filename)：以Json格式导出数据到文本文件</p><h5 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h5><p>pd.DataFrame(np.random.rand(20,5))：创建20行5列的随机数组成的DataFrame对象<br>pd.Series(my_list)：从可迭代对象my_list创建一个Series对象<br>df.index = pd.date_range(‘1900/1/30’, periods=df.shape[0])：增加一个日期索引</p><p>index和<strong>reindex</strong>联合使用很有用处，index可作为索引并且元素乱排序之后，所以跟着元素保持不变，因此，当重拍元素时，只需要对index进行才重排即可:reindex。</p><p>另外， reindex时，还可以增加新的标为NaN的元素。</p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cpandas%5C1.png" alt="1"></p><h5 id="数据查看"><a href="#数据查看" class="headerlink" title="数据查看"></a><strong>数据查看</strong></h5><p>df.head(n)：查看DataFrame对象的前n行<br>df.tail(n)：查看DataFrame对象的最后n行<br>df.shape()：查看行数和列数<br>df.info()：查看索引、数据类型和内存信息<br>df.describe()：查看数值型列的汇总统计<br>s.value_counts(dropna=False)：查看Series对象的唯一值和计数<br>df.apply(pd.Series.value_counts)：查看DataFrame对象中每一列的唯一值和计数</p><p>apply的用处很多，比如可以通过跟<strong>lambda函数</strong>联合，完成很多功能：将包含某个部分的元素挑出来等等。</p><ol><li>cities[‘Is wide and has saint name’] = (cities[‘Area square miles’] &gt; 50) &amp; cities[‘City name’].apply(lambda name: name.startswith(‘San’))</li></ol><h5 id="数据选取"><a href="#数据选取" class="headerlink" title="数据选取"></a><strong>数据选取</strong></h5><ul><li>df[col]：根据列名，并以Series的形式返回列</li><li>df[[col1, col2]]：以DataFrame形式返回多列</li><li>s.iloc[0]：按位置选取数据</li><li>s.loc[‘index_one’]：按索引选取数据</li><li>df.iloc[0,:]：返回第一行</li></ul><h5 id="数据清洗"><a href="#数据清洗" class="headerlink" title="数据清洗"></a><strong>数据清洗</strong></h5><p>df.columns = [‘a’,’b’,’c’]：重命名列名<br>pd.isnull()：检查DataFrame对象中的空值，并返回一个Boolean数组<br>pd.notnull()：检查DataFrame对象中的非空值，并返回一个Boolean数组<br>df.dropna()：删除所有包含空值的行<br>df.fillna(x)：用x替换DataFrame对象中所有的空值<br>s.astype(float)：将Series中的数据类型更改为float类型<br>s.replace(1,’one’)：用‘one’代替所有等于1的值<br>df.rename(columns=lambda x: x + 1)：批量更改列名<br>df.set_index(‘column_one’)：更改索引列</p><h5 id="数据处理：Filter-Sort-GroupBy"><a href="#数据处理：Filter-Sort-GroupBy" class="headerlink" title="数据处理：Filter, Sort, GroupBy"></a><strong>数据处理：Filter, Sort, GroupBy</strong></h5><p>df[df[col] &gt; 0.5]：选择col列的值大于0.5的行<br>df.sort_values(col1)：按照列col1排序数据，默认升序排列<br>df.groupby(col)：返回一个按列col进行分组的Groupby对象<br>df.groupby(col1).agg(np.mean)：返回按列col1分组的所有列的均值<br>df.pivot_table(index=col1, values=[col2,col3], aggfunc=max)：创建一个按列col1进行分组，并计算col2和col3的最大值的数据透视表<br>data.apply(np.mean)：对DataFrame中的每一列应用函数np.mean</p><h5 id="数据合并"><a href="#数据合并" class="headerlink" title="数据合并"></a><strong>数据合并</strong></h5><ul><li>df1.append(df2)：将df2中的行添加到df1的尾部</li><li>df.concat([df1, df2],axis=1)：将df2中的列添加到df1的尾部</li><li>df1.join(df2,on=col1,how=’inner’)：对df1的列和df2的列执行SQL形式的join</li></ul><h5 id="数据统计"><a href="#数据统计" class="headerlink" title="数据统计"></a><strong>数据统计</strong></h5><p>df.describe()：查看数据值列的汇总统计<br>df.mean()：返回所有列的均值<br>df.corr()：返回列与列之间的相关系数<br>df.count()：返回每一列中的非空值的个数<br>df.max()：返回每一列的最大值<br>df.min()：返回每一列的最小值<br>df.median()：返回每一列的中位数<br>df.std()：返回每一列的标准差</p><h5 id="Pandas支持的数据类型"><a href="#Pandas支持的数据类型" class="headerlink" title="Pandas支持的数据类型"></a><strong>Pandas支持的数据类型</strong></h5><ul><li>int 整型</li><li>float 浮点型</li><li>bool 布尔类型</li><li>object 字符串类型</li><li>category 种类</li><li>datetime 时间类型</li></ul><h5 id="补充："><a href="#补充：" class="headerlink" title="补充："></a><strong>补充：</strong></h5><ul><li>df.astypes: 数据格式转换</li><li>df.value_counts:相同数值的个数统计</li><li>df.hist(): 画直方图</li><li>df.get_dummies: one-hot编码，将类型格式的属性转换成矩阵型的属性。比如：三种颜色RGB，红色编码为[1 0 0]</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ML </tag>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python中的切片</title>
+      <link href="/2020/05/13/slice/"/>
+      <url>/2020/05/13/slice/</url>
+      
+        <content type="html"><![CDATA[<h4 id="写在前面："><a href="#写在前面：" class="headerlink" title="写在前面："></a>写在前面：</h4><p>利用python解决问题的过程中，经常会遇到从某个对象中抽取部分值的情况。“切片”操作正是专门用于实现这一目标的有力武器。理论上，只要条件表达式得当，可以通过单次或多次切片操作实现任意目标值切取。切片操作的基本语法比较简单，但如果不彻底搞清楚内在逻辑，也极容易产生错误，而且这种错误有时隐蔽得较深，难以察觉。本文通过详细例子总结归纳了切片操作的各种情形，下文均以list类型作为实验对象，其结论可推广至其他可切片对象。</p><h4 id="一、-Python可切片对象的索引方式"><a href="#一、-Python可切片对象的索引方式" class="headerlink" title="一、 Python可切片对象的索引方式"></a>一、 Python可切片对象的索引方式</h4><p>包括：正索引和负索引两部分，如下图所示，以list对象a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]为例：</p><p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cslice%5C1.png" alt="1"></p><h4 id="二、-Python切片操作的一般方式"><a href="#二、-Python切片操作的一般方式" class="headerlink" title="二、 Python切片操作的一般方式"></a>二、 Python切片操作的一般方式</h4><p>一个完整的切片表达式包含两个“:”，用于分隔三个参数(start_index、end_index、step)。当只有一个“:”时，默认第三个参数step=1；当一个“:”也没有时，start_index=end_index，表示切取start_index指定的那个元素。</p><pre><code>切片操作基本表达式：object[start_index:end_index:step]</code></pre><p>step：正负数均可，其绝对值大小决定了切取数据时的‘‘步长”，而正负号决定了“切取方向”，正表示“从左往右”取值，负表示“从右往左”取值。当step省略时，默认为1，即从左往右以步长1取值。“切取方向非常重要！”“切取方向非常重要！”“切取方向非常重要！”，重要的事情说三遍！</p><p>start_index：表示起始索引（包含该索引对应值）；该参数省略时，表示从对象“端点”开始取值，至于是从“起点”还是从“终点”开始，则由step参数的正负决定，step为正从“起点”开始，为负从“终点”开始。</p><p>end_index：表示终止索引（不包含该索引对应值）；该参数省略时，表示一直取到数据“端点”，至于是到“起点”还是到“终点”，同样由step参数的正负决定，step为正时直到“终点”，为负时直到“起点”。</p><h4 id="三、-Python切片操作详细例子"><a href="#三、-Python切片操作详细例子" class="headerlink" title="三、 Python切片操作详细例子"></a>三、 Python切片操作详细例子</h4><p>以下示例均以list对象a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]为例：</p><pre><code>&gt;&gt;&gt;a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre><h5 id="1-切取单个元素"><a href="#1-切取单个元素" class="headerlink" title="1. 切取单个元素"></a>1. 切取单个元素</h5><pre><code>&gt;&gt;&gt;a[0]&gt;&gt;&gt;0&gt;&gt;&gt;a[-4]&gt;&gt;&gt;6当索引只有一个数时，表示切取某一个元素。</code></pre><h5 id="2-切取完整对象"><a href="#2-切取完整对象" class="headerlink" title="2. 切取完整对象"></a>2. 切取完整对象</h5><pre><code>&gt;&gt;&gt;a[:] #从左往右&gt;&gt;&gt; [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]&gt;&gt;&gt;a[::]#从左往右&gt;&gt;&gt; [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]&gt;&gt;&gt;a[::-1]#从右往左&gt;&gt;&gt; [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]</code></pre><h5 id="3-start-index和end-index全为正（-）索引的情况"><a href="#3-start-index和end-index全为正（-）索引的情况" class="headerlink" title="3. start_index和end_index全为正（+）索引的情况"></a>3. start_index和end_index全为正（+）索引的情况</h5><pre><code>&gt;&gt;&gt;a[1:6]&gt;&gt;&gt; [1, 2, 3, 4, 5]step=1，从左往右取值，start_index=1到end_index=6同样表示从左往右取值。</code></pre><pre><code>&gt;&gt;&gt;a[1:6:-1]&gt;&gt;&gt; []输出为空列表，说明没取到数据。step=-1，决定了从右往左取值，而start_index=1到end_index=6决定了从左往右取值，两者矛盾，所以为空。</code></pre><pre><code>&gt;&gt;&gt;a[6:2]&gt;&gt;&gt; []同样输出为空列表。step=1，决定了从左往右取值，而start_index=6到end_index=2决定了从右往左取值，两者矛盾，所以为空。</code></pre><pre><code>&gt;&gt;&gt;a[:6]&gt;&gt;&gt; [0, 1, 2, 3, 4, 5]step=1，表示从左往右取值，而start_index省略时，表示从端点开始，因此这里的端点是“起点”，即从“起点”值0开始一直取到end_index=6（该点不包括）。</code></pre><pre><code>&gt;&gt;&gt;a[:6:-1]&gt;&gt;&gt; [9, 8, 7]step=-1，从右往左取值，而start_index省略时，表示从端点开始，因此这里的端点是“终点”，即从“终点”值9开始一直取到end_index=6（该点不包括）。</code></pre><pre><code>&gt;&gt;&gt;a[6:]&gt;&gt;&gt; [6, 7, 8, 9]step=1，从左往右取值，从start_index=6开始，一直取到“终点”值9。</code></pre><pre><code>&gt;&gt;&gt;a[6::-1]&gt;&gt;&gt; [6, 5, 4, 3, 2, 1, 0]step=-1，从右往左取值，从start_index=6开始，一直取到“起点”0。</code></pre><h5 id="4-start-index和end-index全为负（-）索引的情况"><a href="#4-start-index和end-index全为负（-）索引的情况" class="headerlink" title="4. start_index和end_index全为负（-）索引的情况"></a>4. start_index和end_index全为负（-）索引的情况</h5><pre><code>&gt;&gt;&gt;a[-1:-6]&gt;&gt;&gt; []step=1，从左往右取值，而start_index=-1到end_index=-6决定了从右往左取值，两者矛盾，所以为空。索引-1在-6的右边（如上图）</code></pre><pre><code>&gt;&gt;&gt;a[-1:-6:-1]&gt;&gt;&gt; [9, 8, 7, 6, 5]step=-1，从右往左取值，start_index=-1到end_index=-6同样是从右往左取值。索引-1在6的右边（如上图）</code></pre><pre><code>&gt;&gt;&gt;a[-6:-1]&gt;&gt;&gt; [4, 5, 6, 7, 8]step=1，从左往右取值，而start_index=-6到end_index=-1同样是从左往右取值。索引-6在-1的左边（如上图）</code></pre><pre><code>&gt;&gt;&gt;a[:-6]&gt;&gt;&gt; [0, 1, 2, 3]step=1，从左往右取值，从“起点”开始一直取到end_index=-6（该点不包括）。</code></pre><pre><code>&gt;&gt;&gt;a[:-6:-1]&gt;&gt;&gt; [9, 8, 7, 6, 5]step=-1，从右往左取值，从“终点”开始一直取到end_index=-6（该点不包括）。</code></pre><pre><code>&gt;&gt;&gt;a[-6:]&gt;&gt;&gt; [4, 5, 6, 7, 8, 9]step=1，从左往右取值，从start_index=-6开始，一直取到“终点”。</code></pre><pre><code>&gt;&gt;&gt;a[-6::-1]&gt;&gt;&gt; [4, 3, 2, 1, 0]step=-1，从右往左取值，从start_index=-6开始，一直取到“起点”。</code></pre><pre><code>&gt;&gt;&gt;a[:-6]&gt;&gt;&gt; [0, 1, 2, 3]step=1，从左往右取值，从“起点”开始一直取到end_index=-6（该点不包括）。</code></pre><pre><code>&gt;&gt;&gt;a[:-6:-1]&gt;&gt;&gt; [9, 8, 7, 6, 5]step=-1，从右往左取值，从“终点”开始一直取到end_index=-6（该点不包括）。</code></pre><pre><code>&gt;&gt;&gt;a[-6:]&gt;&gt;&gt; [4, 5, 6, 7, 8, 9]step=1，从左往右取值，从start_index=-6开始，一直取到“终点”。</code></pre><pre><code>&gt;&gt;&gt;a[-6::-1]&gt;&gt;&gt; [4, 3, 2, 1, 0]step=-1，从右往左取值，从start_index=-6开始，一直取到“起点”。</code></pre><pre><code>5. start_index和end_index正（+）负（-）混合索引的情况</code></pre><pre><code>&gt;&gt;&gt;a[1:-6]&gt;&gt;&gt; [1, 2, 3]start_index=1在end_index=-6的左边，因此从左往右取值，而step=1同样决定了从左往右取值，因此结果正确</code></pre><pre><code>&gt;&gt;&gt;a[1:-6:-1]&gt;&gt;&gt; []start_index=1在end_index=-6的左边，因此从左往右取值，但step=-则决定了从右往左取值，两者矛盾，因此为空。</code></pre><pre><code>&gt;&gt;&gt;a[-1:6]&gt;&gt;&gt; []start_index=-1在end_index=6的右边，因此从右往左取值，但step=1则决定了从左往右取值，两者矛盾，因此为空。</code></pre><pre><code>&gt;&gt;&gt;a[-1:6:-1]&gt;&gt;&gt; [9, 8, 7]start_index=-1在end_index=6的右边，因此从右往左取值，而step=-1同样决定了从右往左取值，因此结果正确。</code></pre><h5 id="6-多层切片操作"><a href="#6-多层切片操作" class="headerlink" title="6. 多层切片操作"></a>6. 多层切片操作</h5><pre><code>&gt;&gt;&gt;a[:8][2:5][-1:]&gt;&gt;&gt; [4]相当于：a[:8]=[0, 1, 2, 3, 4, 5, 6, 7]a[:8][2:5]= [2, 3, 4]a[:8][2:5][-1:] = [4]理论上可无限次多层切片操作，只要上一次返回的是非空可切片对象即可。</code></pre><h5 id="7-切片操作的三个参数可以用表达式"><a href="#7-切片操作的三个参数可以用表达式" class="headerlink" title="7. 切片操作的三个参数可以用表达式"></a>7. 切片操作的三个参数可以用表达式</h5><pre><code>&gt;&gt;&gt;a[2+1:3*2:7%3]&gt;&gt;&gt; [3, 4, 5]即：a[2+1:3*2:7%3] = a[3:6:1]</code></pre><h5 id="8-其他对象的切片操作"><a href="#8-其他对象的切片操作" class="headerlink" title="8. 其他对象的切片操作"></a>8. 其他对象的切片操作</h5><p>前面的切片操作以list对象为例进行说明，但实际上可进行切片操作的数据类型还有很多，包括元组、字符串等等。</p><pre><code>&gt;&gt;&gt; (0, 1, 2, 3, 4, 5)[:3]&gt;&gt;&gt; (0, 1, 2)元组的切片操作</code></pre><pre><code>&gt;&gt;&gt;'ABCDEFG'[::2]&gt;&gt;&gt;'ACEG'字符串的切片操作</code></pre><pre><code>&gt;&gt;&gt;for i in range(1,100)[2::3][-5:]:        print(i)&gt;&gt;&gt;8790939699就是利用range()函数生成1-99的整数，然后从start_index=2（即3）开始以step=3取值，直到终点，再在新序列中取最后五个数。</code></pre><h4 id="四、-常用切片操作"><a href="#四、-常用切片操作" class="headerlink" title="四、 常用切片操作"></a>四、 常用切片操作</h4><h5 id="1-取偶数位置"><a href="#1-取偶数位置" class="headerlink" title="1.取偶数位置"></a>1.取偶数位置</h5><pre><code>&gt;&gt;&gt;b = a[::2][0, 2, 4, 6, 8]</code></pre><h5 id="2-取奇数位置"><a href="#2-取奇数位置" class="headerlink" title="2.取奇数位置"></a>2.取奇数位置</h5><pre><code>&gt;&gt;&gt;b = a[1::2][1, 3, 5, 7, 9]</code></pre><h5 id="3-拷贝整个对象"><a href="#3-拷贝整个对象" class="headerlink" title="3.拷贝整个对象"></a>3.拷贝整个对象</h5><pre><code>&gt;&gt;&gt;b = a[:] #&gt;&gt;&gt;print(b) #[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]&gt;&gt;&gt;print(id(a)) #41946376&gt;&gt;&gt;print(id(b)) #41921864或&gt;&gt;&gt;b = a.copy()&gt;&gt;&gt;print(b) #[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]&gt;&gt;&gt;print(id(a)) #39783752&gt;&gt;&gt;print(id(b)) #39759176</code></pre><p>需要注意的是：<strong>[:]和.copy()都属于“浅拷贝”，只拷贝最外层元素，内层嵌套元素则通过引用方式共享，而非独立分配内存</strong>，如果需要彻底拷贝则需采用“深拷贝”方式，如下例所示：</p><pre><code>&gt;&gt;&gt;a = [1,2,['A','B']]&gt;&gt;&gt;print('a={}'.format(a))&gt;&gt;&gt;b = a[:]&gt;&gt;&gt;b[0] = 9 #修改b的最外层元素，将1变成9&gt;&gt;&gt;b[2][0] = 'D' #修改b的内嵌层元素&gt;&gt;&gt;print('a={}'.format(a))&gt;&gt;&gt;print('b={}'.format(b))&gt;&gt;&gt;print('id(a)={}'.format(id(a)))&gt;&gt;&gt;print('id(b)={}'.format(id(b)))a=[1, 2, ['A', 'B']] #原始aa=[1, 2, ['D', 'B']] #b修改内部元素A为D后，a中的A也变成了D，说明共享内部嵌套元素，但外部元素1没变。b=[9, 2, ['D', 'B']] #修改后的bid(a)=38669128id(b)=38669192</code></pre><h5 id="4-修改单个元素"><a href="#4-修改单个元素" class="headerlink" title="4.修改单个元素"></a>4.修改单个元素</h5><pre><code>&gt;&gt;&gt;a[3] = ['A','B'][0, 1, 2, ['A', 'B'], 4, 5, 6, 7, 8, 9]</code></pre><h5 id="5-在某个位置插入元素"><a href="#5-在某个位置插入元素" class="headerlink" title="5.在某个位置插入元素"></a>5.在某个位置插入元素</h5><pre><code>&gt;&gt;&gt;a[3:3] = ['A','B','C'][0, 1, 2, 'A', 'B', 'C', 3, 4, 5, 6, 7, 8, 9]&gt;&gt;&gt;a[0:0] = ['A','B']['A', 'B', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code></pre><h5 id="6-替换一部分元素"><a href="#6-替换一部分元素" class="headerlink" title="6.替换一部分元素"></a>6.替换一部分元素</h5><pre><code>&gt;&gt;&gt;a[3:6] = ['A','B'][0, 1, 2, 'A', 'B', 6, 7, 8, 9]</code></pre><h4 id="五、-总结"><a href="#五、-总结" class="headerlink" title="五、 总结"></a>五、 总结</h4><p>（一）start_index、end_index、step三者可同为正、同为负，或正负混合。但必须遵循一个原则，即：当start_index表示的实际位置在end_index的左边时，从左往右取值，此时step必须是正数（同样表示从左往右）；当start_index表示的实际位置在end_index的右边时，表示从右往左取值，此时step必须是负数（同样表示从右往左），即两者的取值顺序必须相同。</p><p>（二）当start_index或end_index省略时，取值的起始索引和终止索引由step的正负来决定，这种情况不会有取值方向矛盾（即不会返回空列表[]），但正和负取到的结果顺序是相反的，因为一个向左一个向右。</p><p>（三）step的正负是必须要考虑的，尤其是当step省略时。比如a[-1:]，很容易就误认为是从“终点”开始一直取到“起点”，即a[-1:]= [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]，但实际上a[-1:]=[9]（注意不是9），原因在于step省略时step=1表示从左往右取值，而起始索引start_index=-1本身就是对象的最右边元素了，再往右已经没数据了，因此结果只含有9一个元素。</p><p>（四）需要注意：“取单个元素（不带“:”）”时，返回的是对象的某个元素，其类型由元素本身的类型决定，而与母对象无关，如上面的a[0]=0、a[-4]=6，元素0和6都是“数值型”，而母对象a却是“list”型；“取连续切片（带“:”）”时，返回结果的类型与母对象相同，哪怕切取的连续切片只包含一个元素，如上面的a[-1:]=[9]，返回的是一个只包含元素“9”的list，而非数值型“9‘。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>django错误</title>
       <link href="/2020/05/12/django1/"/>
       <url>/2020/05/12/django1/</url>
       
-        <content type="html"><![CDATA[<p><img src="" alt="1.png"></p><p>在数据迁移是遇到这个错误，解决方法是：因为应用都放在apps下，发生错误的原因是找不到对应的包，解决方法：apps文件夹右键找到Make Direcoory as 有个Resource，把apps文件夹都resource一下，目的使让pycharm找文件从apps目录下面找，这样导包就不会有问题，但是还有问题，这个仅仅在pycharm里面有用,在你用命令行运行manage.py时还会报错</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<p><img src="C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cdjango1%5C1.png" alt="1"></p><p>在数据迁移是遇到这个错误，解决方法是：因为应用都放在apps下，发生错误的原因是找不到对应的包，解决方法：apps文件夹右键找到Make Direcoory as 有个Resource，把apps文件夹都resource一下，目的使让pycharm找文件从apps目录下面找，这样导包就不会有问题，但是还有问题，这个仅仅在pycharm里面有用,在你用命令行运行manage.py时还会报错</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
@@ -29,7 +658,7 @@
     
     
     <entry>
-      <title>leecode5</title>
+      <title>leetcode刷题</title>
       <link href="/2020/05/12/leecode5/"/>
       <url>/2020/05/12/leecode5/</url>
       
@@ -38,14 +667,14 @@
       
       <categories>
           
-          <category> leecode </category>
+          <category> leetcode </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> leecode </tag>
+            <tag> leetcode </tag>
             
             <tag> 算法 </tag>
             
@@ -56,7 +685,7 @@
     
     
     <entry>
-      <title>leecode4</title>
+      <title>leetcode刷题</title>
       <link href="/2020/05/12/leecode4/"/>
       <url>/2020/05/12/leecode4/</url>
       
@@ -65,14 +694,14 @@
       
       <categories>
           
-          <category> leecode </category>
+          <category> leetcode </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> leecode </tag>
+            <tag> leetcode </tag>
             
             <tag> 算法 </tag>
             
@@ -92,14 +721,14 @@
       
       <categories>
           
-          <category> leecode </category>
+          <category> leetcode </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> leecode </tag>
+            <tag> leetcode </tag>
             
             <tag> 算法 </tag>
             
@@ -126,9 +755,9 @@
       
         <tags>
             
-            <tag> 算法 </tag>
-            
             <tag> leetcode </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
       

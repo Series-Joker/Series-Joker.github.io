@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://macherken.site.com/"/>
-  <updated>2020-05-12T12:51:50.532Z</updated>
+  <updated>2020-05-13T04:06:05.897Z</updated>
   <id>https://macherken.site.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>django1</title>
-    <link href="https://macherken.site.com/2020/05/12/django1/"/>
-    <id>https://macherken.site.com/2020/05/12/django1/</id>
-    <published>2020-05-12T12:44:02.000Z</published>
-    <updated>2020-05-12T12:51:50.532Z</updated>
+    <title>numpy</title>
+    <link href="https://macherken.site.com/2020/05/13/numpy/"/>
+    <id>https://macherken.site.com/2020/05/13/numpy/</id>
+    <published>2020-05-13T03:55:45.000Z</published>
+    <updated>2020-05-13T04:06:05.897Z</updated>
     
     <summary type="html">
     
@@ -29,26 +29,25 @@
       
         
         
-          &lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;1.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;在数据迁移是遇到这个错误，解决方法是：因为应用都放在apps下，发生错误的原因是找不到对应的包，解决方法：apps文件夹右键找到Make Direcoory as
+          &lt;h2 id=&quot;NumPy-简介&quot;&gt;&lt;a href=&quot;#NumPy-简介&quot; class=&quot;headerlink&quot; title=&quot;NumPy - 简介&quot;&gt;&lt;/a&gt;NumPy - 简介&lt;/h2&gt;&lt;p&gt;NumPy 是一个 Python 包。 它代表 “Numeric Python”。
         
       
     
     </summary>
     
-      <category term="django" scheme="https://macherken.site.com/categories/django/"/>
+      <category term="numpy" scheme="https://macherken.site.com/categories/numpy/"/>
     
     
-      <category term="django" scheme="https://macherken.site.com/tags/django/"/>
+      <category term="numpy" scheme="https://macherken.site.com/tags/numpy/"/>
     
   </entry>
   
   <entry>
-    <title>leecode5</title>
-    <link href="https://macherken.site.com/2020/05/12/leecode5/"/>
-    <id>https://macherken.site.com/2020/05/12/leecode5/</id>
-    <published>2020-05-12T12:34:09.000Z</published>
-    <updated>2020-05-12T12:37:57.414Z</updated>
+    <title>L1L2正则化</title>
+    <link href="https://macherken.site.com/2020/05/13/ml13/"/>
+    <id>https://macherken.site.com/2020/05/13/ml13/</id>
+    <published>2020-05-13T03:22:32.000Z</published>
+    <updated>2020-05-13T03:52:35.727Z</updated>
     
     <summary type="html">
     
@@ -56,28 +55,26 @@
       
         
         
-          &lt;h4 id=&quot;题目要求：&quot;&gt;&lt;a href=&quot;#题目要求：&quot; class=&quot;headerlink&quot; title=&quot;题目要求：&quot;&gt;&lt;/a&gt;题目要求：&lt;/h4&gt;&lt;p&gt; 回文串：从左边往右读和从右边往左读是一样的&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Iuput；s =
+          &lt;h3 id=&quot;偏差方差权衡&quot;&gt;&lt;a href=&quot;#偏差方差权衡&quot; class=&quot;headerlink&quot; title=&quot;偏差方差权衡&quot;&gt;&lt;/a&gt;偏差方差权衡&lt;/h3&gt;&lt;p&gt;降低模型复杂度&lt;br&gt;减少数据维度，降噪&lt;br&gt;增加样本数&lt;br&gt;使用验证集&lt;/p&gt;
+&lt;h4
         
       
     
     </summary>
     
-      <category term="leecode" scheme="https://macherken.site.com/categories/leecode/"/>
+      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
     
     
-      <category term="leecode" scheme="https://macherken.site.com/tags/leecode/"/>
-    
-      <category term="算法" scheme="https://macherken.site.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
     
   </entry>
   
   <entry>
-    <title>leecode4</title>
-    <link href="https://macherken.site.com/2020/05/12/leecode4/"/>
-    <id>https://macherken.site.com/2020/05/12/leecode4/</id>
-    <published>2020-05-12T12:30:12.000Z</published>
-    <updated>2020-05-12T12:33:40.433Z</updated>
+    <title>肺炎预测</title>
+    <link href="https://macherken.site.com/2020/05/13/ml12/"/>
+    <id>https://macherken.site.com/2020/05/13/ml12/</id>
+    <published>2020-05-13T03:20:26.000Z</published>
+    <updated>2020-05-13T03:52:17.042Z</updated>
     
     <summary type="html">
     
@@ -85,27 +82,26 @@
       
         
         
-          &lt;h4 id=&quot;题目要求：&quot;&gt;&lt;a href=&quot;#题目要求：&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;1、什么是SEIR模型&lt;/p&gt;
+&lt;p&gt;常见的传染病模型按照传染病类型分为SI、SIR、SIRS、SEIR
         
       
     
     </summary>
     
-      <category term="leecode" scheme="https://macherken.site.com/categories/leecode/"/>
+      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
     
     
-      <category term="leecode" scheme="https://macherken.site.com/tags/leecode/"/>
-    
-      <category term="算法" scheme="https://macherken.site.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
     
   </entry>
   
   <entry>
-    <title>Leecode刷题</title>
-    <link href="https://macherken.site.com/2020/05/12/leecode1/"/>
-    <id>https://macherken.site.com/2020/05/12/leecode1/</id>
-    <published>2020-05-12T12:12:36.000Z</published>
-    <updated>2020-05-12T12:40:57.142Z</updated>
+    <title>混淆矩阵</title>
+    <link href="https://macherken.site.com/2020/05/13/ml11/"/>
+    <id>https://macherken.site.com/2020/05/13/ml11/</id>
+    <published>2020-05-13T03:16:52.000Z</published>
+    <updated>2020-05-13T03:52:03.860Z</updated>
     
     <summary type="html">
     
@@ -113,27 +109,27 @@
       
         
         
-          &lt;h4 id=&quot;难度：简单&quot;&gt;&lt;a href=&quot;#难度：简单&quot; class=&quot;headerlink&quot; title=&quot;难度：简单&quot;&gt;&lt;/a&gt;难度：简单&lt;/h4&gt;&lt;h5 id=&quot;题目要求：&quot;&gt;&lt;a href=&quot;#题目要求：&quot; class=&quot;headerlink&quot;
+          &lt;pre&gt;&lt;code&gt;digits = datasets.load_digits()
+X = digits.data
+y = digits.target.copy()&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;from sklearn.model_selection
         
       
     
     </summary>
     
-      <category term="leecode" scheme="https://macherken.site.com/categories/leecode/"/>
+      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
     
     
-      <category term="leecode" scheme="https://macherken.site.com/tags/leecode/"/>
-    
-      <category term="算法" scheme="https://macherken.site.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
     
   </entry>
   
   <entry>
-    <title>十大经典排序算法整理汇总（附代码）</title>
-    <link href="https://macherken.site.com/2020/02/16/sort-algorithms/"/>
-    <id>https://macherken.site.com/2020/02/16/sort-algorithms/</id>
-    <published>2020-02-16T07:09:23.000Z</published>
-    <updated>2020-05-12T06:40:32.037Z</updated>
+    <title>opencv入门五</title>
+    <link href="https://macherken.site.com/2020/05/13/opencv4/"/>
+    <id>https://macherken.site.com/2020/05/13/opencv4/</id>
+    <published>2020-05-13T03:15:17.000Z</published>
+    <updated>2020-05-13T03:53:38.339Z</updated>
     
     <summary type="html">
     
@@ -141,20 +137,459 @@
       
         
         
-          &lt;p&gt;前言&lt;/p&gt;
-&lt;p&gt;本文整理并总结了十大经典的排序算法（冒泡排序、选择排序、插入排序、快速排序、归并排序、希尔排序、计数排序、基数排序、桶排序、堆排序）的时间复杂度、空间复杂度等性质。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;本文并不会详细讲解每种排序算法的原理&lt;/strong&gt;，网
+          &lt;pre&gt;&lt;code&gt;import tensorflow as tf
+import numpy as np
+import cv2
+import random&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;img1 =
         
       
     
     </summary>
     
-      <category term="编程算法" scheme="https://macherken.site.com/categories/%E7%BC%96%E7%A8%8B%E7%AE%97%E6%B3%95/"/>
+      <category term="opencv" scheme="https://macherken.site.com/categories/opencv/"/>
     
     
-      <category term="算法" scheme="https://macherken.site.com/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="opencv" scheme="https://macherken.site.com/tags/opencv/"/>
     
-      <category term="leetcode" scheme="https://macherken.site.com/tags/leetcode/"/>
+  </entry>
+  
+  <entry>
+    <title>opencv入门三</title>
+    <link href="https://macherken.site.com/2020/05/13/opencv3/"/>
+    <id>https://macherken.site.com/2020/05/13/opencv3/</id>
+    <published>2020-05-13T03:13:49.000Z</published>
+    <updated>2020-05-13T03:53:24.948Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;import tensorflow as tf
+import numpy as np
+import cv2&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# 0 -255
+#灰色图片
+img =
+        
+      
+    
+    </summary>
+    
+      <category term="opencv" scheme="https://macherken.site.com/categories/opencv/"/>
+    
+    
+      <category term="opencv" scheme="https://macherken.site.com/tags/opencv/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>opencv入门1</title>
+    <link href="https://macherken.site.com/2020/05/13/opencv2/"/>
+    <id>https://macherken.site.com/2020/05/13/opencv2/</id>
+    <published>2020-05-13T03:11:04.000Z</published>
+    <updated>2020-05-13T03:52:59.633Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;# import tensorflow as ts
+import numpy as np
+import cv2
+import matplotlib.pyplot as plt&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;美颜&quot;&gt;&lt;a href=&quot;#美颜&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="opencv" scheme="https://macherken.site.com/categories/opencv/"/>
+    
+    
+      <category term="opencv" scheme="https://macherken.site.com/tags/opencv/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>opencv入门二</title>
+    <link href="https://macherken.site.com/2020/05/13/opencv1/"/>
+    <id>https://macherken.site.com/2020/05/13/opencv1/</id>
+    <published>2020-05-13T03:08:48.000Z</published>
+    <updated>2020-05-13T03:53:13.409Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;import tensorflow as ts
+import numpy as np
+import cv2
+# import matplotlib.pyplot as plt&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;方法一&quot;&gt;&lt;a href=&quot;#方法一&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="opencv" scheme="https://macherken.site.com/categories/opencv/"/>
+    
+    
+      <category term="opencv" scheme="https://macherken.site.com/tags/opencv/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>集成学习</title>
+    <link href="https://macherken.site.com/2020/05/13/ml10/"/>
+    <id>https://macherken.site.com/2020/05/13/ml10/</id>
+    <published>2020-05-13T02:59:56.000Z</published>
+    <updated>2020-05-13T03:51:39.127Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;import numpy as np
+import matplotlib.pyplot as plt
+import warnings
+warnings.filterwarnings&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;from sklearn
+        
+      
+    
+    </summary>
+    
+      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
+    
+    
+      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LGB</title>
+    <link href="https://macherken.site.com/2020/05/13/ml9/"/>
+    <id>https://macherken.site.com/2020/05/13/ml9/</id>
+    <published>2020-05-13T02:54:10.000Z</published>
+    <updated>2020-05-13T03:51:15.460Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml9%5C1.png&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
+    
+    
+      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://macherken.site.com/2020/05/13/ml8/"/>
+    <id>https://macherken.site.com/2020/05/13/ml8/</id>
+    <published>2020-05-13T02:44:31.000Z</published>
+    <updated>2020-05-13T03:51:04.428Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;XGBoots&quot;&gt;&lt;a href=&quot;#XGBoots&quot; class=&quot;headerlink&quot; title=&quot;XGBoots&quot;&gt;&lt;/a&gt;XGBoots&lt;/h3&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
+    
+    
+      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法评价指标</title>
+    <link href="https://macherken.site.com/2020/05/13/ml7/"/>
+    <id>https://macherken.site.com/2020/05/13/ml7/</id>
+    <published>2020-05-13T02:42:06.000Z</published>
+    <updated>2020-05-13T03:50:42.895Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;import numpy as np
+from math import sqrt
+
+
+def accuracy_score(y_true, y_predict):
+    &quot;&quot;&quot;计算y_true和y_predict之间的准确率&quot;&quot;&quot;
+    assert
+        
+      
+    
+    </summary>
+    
+      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
+    
+    
+      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>KNN</title>
+    <link href="https://macherken.site.com/2020/05/13/ml6/"/>
+    <id>https://macherken.site.com/2020/05/13/ml6/</id>
+    <published>2020-05-13T02:39:54.000Z</published>
+    <updated>2020-05-13T03:50:14.762Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;import numpy as np
+from math import sqrt
+from collections import Counter
+from .metrics import accuracy_score
+
+class
+        
+      
+    
+    </summary>
+    
+      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
+    
+    
+      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SimpleLinerRegression</title>
+    <link href="https://macherken.site.com/2020/05/13/ml5/"/>
+    <id>https://macherken.site.com/2020/05/13/ml5/</id>
+    <published>2020-05-13T02:38:25.000Z</published>
+    <updated>2020-05-13T03:49:55.386Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;import numpy as np
+from .metrics import r2_score
+
+
+class SimpleLinearRegression:
+
+    def __init__(self):
+        &quot;&quot;&quot;初始化Simple
+        
+      
+    
+    </summary>
+    
+      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
+    
+    
+      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PCA降维</title>
+    <link href="https://macherken.site.com/2020/05/13/ml4/"/>
+    <id>https://macherken.site.com/2020/05/13/ml4/</id>
+    <published>2020-05-13T02:37:22.000Z</published>
+    <updated>2020-05-13T03:49:27.866Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;import numpy as np
+
+
+class PCA:
+
+    def __init__(self, n_components):
+        &quot;&quot;&quot;初始化PCA&quot;&quot;&quot;
+        assert n_components &amp;gt;= 1,
+        
+      
+    
+    </summary>
+    
+      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
+    
+    
+      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LinerRegression</title>
+    <link href="https://macherken.site.com/2020/05/13/ml3/"/>
+    <id>https://macherken.site.com/2020/05/13/ml3/</id>
+    <published>2020-05-13T02:35:56.000Z</published>
+    <updated>2020-05-13T03:49:11.884Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;import numpy as np
+from .metrics import r2_score
+
+class LinearRegression:
+
+    def __init__(self):
+        &quot;&quot;&quot;初始化Linear
+        
+      
+    
+    </summary>
+    
+      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
+    
+    
+      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>预测员工离职率</title>
+    <link href="https://macherken.site.com/2020/05/13/ml2/"/>
+    <id>https://macherken.site.com/2020/05/13/ml2/</id>
+    <published>2020-05-13T02:28:01.000Z</published>
+    <updated>2020-05-13T03:48:45.741Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;使用决策树和随机森林预测员工离职率&quot;&gt;&lt;a href=&quot;#使用决策树和随机森林预测员工离职率&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
+    
+    
+      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cnn手写数字识别</title>
+    <link href="https://macherken.site.com/2020/05/13/ml1/"/>
+    <id>https://macherken.site.com/2020/05/13/ml1/</id>
+    <published>2020-05-13T02:26:21.000Z</published>
+    <updated>2020-05-13T03:48:25.472Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;import tensorflow as tf
+import numpy as np
+import random
+from tensorflow.examples.tutorials.mnist import
+        
+      
+    
+    </summary>
+    
+      <category term="dl" scheme="https://macherken.site.com/categories/dl/"/>
+    
+    
+      <category term="dl" scheme="https://macherken.site.com/tags/dl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BigData大数据</title>
+    <link href="https://macherken.site.com/2020/05/13/bigdata1/"/>
+    <id>https://macherken.site.com/2020/05/13/bigdata1/</id>
+    <published>2020-05-13T02:14:08.000Z</published>
+    <updated>2020-05-13T03:44:51.761Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5CBigData1%5C1.png&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="BigData" scheme="https://macherken.site.com/categories/BigData/"/>
+    
+    
+      <category term="BidData" scheme="https://macherken.site.com/tags/BidData/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深度学习入门</title>
+    <link href="https://macherken.site.com/2020/05/13/dl2/"/>
+    <id>https://macherken.site.com/2020/05/13/dl2/</id>
+    <published>2020-05-13T02:09:12.000Z</published>
+    <updated>2020-05-13T03:45:58.456Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;图&quot;&gt;&lt;a href=&quot;#图&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;tf.get_default_graph()
+
+op,sess或者tensor的graph属性&lt;/code&gt;&lt;/pre&gt;&lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
+    
+    
+      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
     
   </entry>
   
