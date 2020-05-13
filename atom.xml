@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://macherken.site.com/"/>
-  <updated>2020-05-13T04:06:05.897Z</updated>
+  <updated>2020-05-13T13:22:24.269Z</updated>
   <id>https://macherken.site.com/</id>
   
   <author>
@@ -15,6 +15,218 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode刷题</title>
+    <link href="https://macherken.site.com/2020/05/13/leetcode10/"/>
+    <id>https://macherken.site.com/2020/05/13/leetcode10/</id>
+    <published>2020-05-13T13:16:46.000Z</published>
+    <updated>2020-05-13T13:22:24.269Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;题目要求：&quot;&gt;&lt;a href=&quot;#题目要求：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="https://macherken.site.com/categories/leetcode/"/>
+    
+    
+      <category term="leetcode" scheme="https://macherken.site.com/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题</title>
+    <link href="https://macherken.site.com/2020/05/13/leetcode9/"/>
+    <id>https://macherken.site.com/2020/05/13/leetcode9/</id>
+    <published>2020-05-13T13:11:17.000Z</published>
+    <updated>2020-05-13T13:15:46.233Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;题目要求：&quot;&gt;&lt;a href=&quot;#题目要求：&quot; class=&quot;headerlink&quot; title=&quot;题目要求：&quot;&gt;&lt;/a&gt;题目要求：&lt;/h4&gt;&lt;p&gt;给你一个字符串 &lt;code&gt;s&lt;/code&gt; 和一个字符规律 &lt;code&gt;p&lt;/code&gt;，请你来实现一个支持
+        
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="https://macherken.site.com/categories/leetcode/"/>
+    
+    
+      <category term="leetcode" scheme="https://macherken.site.com/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题</title>
+    <link href="https://macherken.site.com/2020/05/13/leetcode8/"/>
+    <id>https://macherken.site.com/2020/05/13/leetcode8/</id>
+    <published>2020-05-13T13:07:18.000Z</published>
+    <updated>2020-05-13T13:10:43.322Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;题目要求：&quot;&gt;&lt;a href=&quot;#题目要求：&quot; class=&quot;headerlink&quot; title=&quot;题目要求：&quot;&gt;&lt;/a&gt;题目要求：&lt;/h4&gt;&lt;p&gt;给定一个整数数组 A，返回 A 中最长等差子序列的长度。&lt;/p&gt;
+&lt;p&gt;回想一下，A 的子序列是列表
+        
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="https://macherken.site.com/categories/leetcode/"/>
+    
+    
+      <category term="leetcode" scheme="https://macherken.site.com/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题</title>
+    <link href="https://macherken.site.com/2020/05/13/leetcode7/"/>
+    <id>https://macherken.site.com/2020/05/13/leetcode7/</id>
+    <published>2020-05-13T13:05:17.000Z</published>
+    <updated>2020-05-13T13:06:33.153Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;题目要求：&quot;&gt;&lt;a href=&quot;#题目要求：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="https://macherken.site.com/categories/leetcode/"/>
+    
+    
+      <category term="leetcode" scheme="https://macherken.site.com/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题</title>
+    <link href="https://macherken.site.com/2020/05/13/leetcode3/"/>
+    <id>https://macherken.site.com/2020/05/13/leetcode3/</id>
+    <published>2020-05-13T13:02:49.000Z</published>
+    <updated>2020-05-13T13:04:20.673Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;题目要求：&quot;&gt;&lt;a href=&quot;#题目要求：&quot; class=&quot;headerlink&quot; title=&quot;题目要求：&quot;&gt;&lt;/a&gt;题目要求：&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;由于只包含字符的字符串&#39;(&#39;,
+        
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="https://macherken.site.com/categories/leetcode/"/>
+    
+    
+      <category term="leetcode" scheme="https://macherken.site.com/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题</title>
+    <link href="https://macherken.site.com/2020/05/13/leetcode2/"/>
+    <id>https://macherken.site.com/2020/05/13/leetcode2/</id>
+    <published>2020-05-13T12:57:59.000Z</published>
+    <updated>2020-05-13T13:00:59.805Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;题目要求：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;给定一组非负整数，重新排列它们的顺序使之组成一个最大的整数&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入: [10,2]
+输出:
+        
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="https://macherken.site.com/categories/leetcode/"/>
+    
+    
+      <category term="leetcode" scheme="https://macherken.site.com/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题</title>
+    <link href="https://macherken.site.com/2020/05/13/leetcode6/"/>
+    <id>https://macherken.site.com/2020/05/13/leetcode6/</id>
+    <published>2020-05-13T12:50:33.000Z</published>
+    <updated>2020-05-13T12:56:24.435Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;题目要求：&quot;&gt;&lt;a href=&quot;#题目要求：&quot; class=&quot;headerlink&quot; title=&quot;题目要求：&quot;&gt;&lt;/a&gt;题目要求：&lt;/h4&gt;&lt;p&gt;给定一个包含非负数的数组和一个目标整数 k，编写一个函数来判断该数组是否含有连续的子数组，其大小至少为 2，总和为
+        
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="https://macherken.site.com/categories/leetcode/"/>
+    
+    
+      <category term="leetcode" scheme="https://macherken.site.com/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jieba</title>
+    <link href="https://macherken.site.com/2020/05/13/jieba/"/>
+    <id>https://macherken.site.com/2020/05/13/jieba/</id>
+    <published>2020-05-13T12:41:45.000Z</published>
+    <updated>2020-05-13T12:47:27.454Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;基于结巴的分词，最常用的中文分词工具&quot;&gt;&lt;a href=&quot;#基于结巴的分词，最常用的中文分词工具&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="nlp" scheme="https://macherken.site.com/categories/nlp/"/>
+    
+    
+      <category term="nlp" scheme="https://macherken.site.com/tags/nlp/"/>
+    
+  </entry>
   
   <entry>
     <title>numpy</title>
@@ -343,244 +555,6 @@ from math import sqrt
 def accuracy_score(y_true, y_predict):
     &quot;&quot;&quot;计算y_true和y_predict之间的准确率&quot;&quot;&quot;
     assert
-        
-      
-    
-    </summary>
-    
-      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
-    
-    
-      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>KNN</title>
-    <link href="https://macherken.site.com/2020/05/13/ml6/"/>
-    <id>https://macherken.site.com/2020/05/13/ml6/</id>
-    <published>2020-05-13T02:39:54.000Z</published>
-    <updated>2020-05-13T03:50:14.762Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre&gt;&lt;code&gt;import numpy as np
-from math import sqrt
-from collections import Counter
-from .metrics import accuracy_score
-
-class
-        
-      
-    
-    </summary>
-    
-      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
-    
-    
-      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SimpleLinerRegression</title>
-    <link href="https://macherken.site.com/2020/05/13/ml5/"/>
-    <id>https://macherken.site.com/2020/05/13/ml5/</id>
-    <published>2020-05-13T02:38:25.000Z</published>
-    <updated>2020-05-13T03:49:55.386Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre&gt;&lt;code&gt;import numpy as np
-from .metrics import r2_score
-
-
-class SimpleLinearRegression:
-
-    def __init__(self):
-        &quot;&quot;&quot;初始化Simple
-        
-      
-    
-    </summary>
-    
-      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
-    
-    
-      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PCA降维</title>
-    <link href="https://macherken.site.com/2020/05/13/ml4/"/>
-    <id>https://macherken.site.com/2020/05/13/ml4/</id>
-    <published>2020-05-13T02:37:22.000Z</published>
-    <updated>2020-05-13T03:49:27.866Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre&gt;&lt;code&gt;import numpy as np
-
-
-class PCA:
-
-    def __init__(self, n_components):
-        &quot;&quot;&quot;初始化PCA&quot;&quot;&quot;
-        assert n_components &amp;gt;= 1,
-        
-      
-    
-    </summary>
-    
-      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
-    
-    
-      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LinerRegression</title>
-    <link href="https://macherken.site.com/2020/05/13/ml3/"/>
-    <id>https://macherken.site.com/2020/05/13/ml3/</id>
-    <published>2020-05-13T02:35:56.000Z</published>
-    <updated>2020-05-13T03:49:11.884Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre&gt;&lt;code&gt;import numpy as np
-from .metrics import r2_score
-
-class LinearRegression:
-
-    def __init__(self):
-        &quot;&quot;&quot;初始化Linear
-        
-      
-    
-    </summary>
-    
-      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
-    
-    
-      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>预测员工离职率</title>
-    <link href="https://macherken.site.com/2020/05/13/ml2/"/>
-    <id>https://macherken.site.com/2020/05/13/ml2/</id>
-    <published>2020-05-13T02:28:01.000Z</published>
-    <updated>2020-05-13T03:48:45.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;使用决策树和随机森林预测员工离职率&quot;&gt;&lt;a href=&quot;#使用决策树和随机森林预测员工离职率&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
-    
-    
-      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>cnn手写数字识别</title>
-    <link href="https://macherken.site.com/2020/05/13/ml1/"/>
-    <id>https://macherken.site.com/2020/05/13/ml1/</id>
-    <published>2020-05-13T02:26:21.000Z</published>
-    <updated>2020-05-13T03:48:25.472Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre&gt;&lt;code&gt;import tensorflow as tf
-import numpy as np
-import random
-from tensorflow.examples.tutorials.mnist import
-        
-      
-    
-    </summary>
-    
-      <category term="dl" scheme="https://macherken.site.com/categories/dl/"/>
-    
-    
-      <category term="dl" scheme="https://macherken.site.com/tags/dl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BigData大数据</title>
-    <link href="https://macherken.site.com/2020/05/13/bigdata1/"/>
-    <id>https://macherken.site.com/2020/05/13/bigdata1/</id>
-    <published>2020-05-13T02:14:08.000Z</published>
-    <updated>2020-05-13T03:44:51.761Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5CBigData1%5C1.png&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="BigData" scheme="https://macherken.site.com/categories/BigData/"/>
-    
-    
-      <category term="BidData" scheme="https://macherken.site.com/tags/BidData/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深度学习入门</title>
-    <link href="https://macherken.site.com/2020/05/13/dl2/"/>
-    <id>https://macherken.site.com/2020/05/13/dl2/</id>
-    <published>2020-05-13T02:09:12.000Z</published>
-    <updated>2020-05-13T03:45:58.456Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;图&quot;&gt;&lt;a href=&quot;#图&quot; class=&quot;headerlink&quot; title=&quot;图&quot;&gt;&lt;/a&gt;图&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;tf.get_default_graph()
-
-op,sess或者tensor的graph属性&lt;/code&gt;&lt;/pre&gt;&lt;h3
         
       
     
