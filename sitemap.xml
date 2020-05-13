@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://macherken.site.com/bbs/index.html</loc>
+    
+    <lastmod>2020-05-13T12:17:05.462Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://macherken.site.com/2020/05/13/numpy/</loc>
     
     <lastmod>2020-05-13T04:06:05.897Z</lastmod>
@@ -205,13 +212,6 @@
   </url>
   
   <url>
-    <loc>https://macherken.site.com/bbs/index.html</loc>
-    
-    <lastmod>2020-05-12T07:59:22.897Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://macherken.site.com/contact/index.html</loc>
     
     <lastmod>2020-05-12T07:07:54.426Z</lastmod>
@@ -247,13 +247,6 @@
   </url>
   
   <url>
-    <loc>https://macherken.site.com/friends/index.html</loc>
-    
-    <lastmod>2020-04-04T11:43:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://macherken.site.com/categories/index.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
@@ -262,6 +255,13 @@
   
   <url>
     <loc>https://macherken.site.com/tags/index.html</loc>
+    
+    <lastmod>2020-04-04T11:43:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/friends/index.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
     
