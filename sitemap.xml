@@ -296,13 +296,6 @@
   </url>
   
   <url>
-    <loc>https://macherken.site.com/categories/index.html</loc>
-    
-    <lastmod>2020-04-04T11:43:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://macherken.site.com/archives/index.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
@@ -310,7 +303,7 @@
   </url>
   
   <url>
-    <loc>https://macherken.site.com/tags/index.html</loc>
+    <loc>https://macherken.site.com/categories/index.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
     
@@ -318,6 +311,13 @@
   
   <url>
     <loc>https://macherken.site.com/friends/index.html</loc>
+    
+    <lastmod>2020-04-04T11:43:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://macherken.site.com/tags/index.html</loc>
     
     <lastmod>2020-04-04T11:43:42.000Z</lastmod>
     
