@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://macherken.site.com/"/>
-  <updated>2020-05-13T13:22:24.269Z</updated>
+  <updated>2020-05-15T03:07:10.076Z</updated>
   <id>https://macherken.site.com/</id>
   
   <author>
@@ -17,11 +17,145 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>分治法</title>
+    <link href="https://macherken.site.com/2020/05/15/fen-zhi-fa/"/>
+    <id>https://macherken.site.com/2020/05/15/fen-zhi-fa/</id>
+    <published>2020-05-15T02:56:26.000Z</published>
+    <updated>2020-05-15T03:07:10.076Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://macherken.site.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="leetcode" scheme="https://macherken.site.com/tags/leetcode/"/>
+    
+      <category term="分治法" scheme="https://macherken.site.com/tags/%E5%88%86%E6%B2%BB%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>动态规划你不得不熟悉的算法</title>
+    <link href="https://macherken.site.com/2020/05/15/dong-tai-gui-hua/"/>
+    <id>https://macherken.site.com/2020/05/15/dong-tai-gui-hua/</id>
+    <published>2020-05-15T02:04:22.000Z</published>
+    <updated>2020-05-15T02:56:10.546Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;什么是动态规划&quot;&gt;&lt;a href=&quot;#什么是动态规划&quot; class=&quot;headerlink&quot; title=&quot;什么是动态规划&quot;&gt;&lt;/a&gt;什么是动态规划&lt;/h2&gt;&lt;p&gt;用一句话解释动态规划就是
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://macherken.site.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="leetcode" scheme="https://macherken.site.com/tags/leetcode/"/>
+    
+      <category term="算法" scheme="https://macherken.site.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>五分钟了解一下贪心算法</title>
+    <link href="https://macherken.site.com/2020/05/15/tan-xin-suan-fa/"/>
+    <id>https://macherken.site.com/2020/05/15/tan-xin-suan-fa/</id>
+    <published>2020-05-15T01:38:03.000Z</published>
+    <updated>2020-05-15T01:56:13.875Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="https://macherken.site.com/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="https://macherken.site.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学好数据结构与算法</title>
+    <link href="https://macherken.site.com/2020/05/15/dp2/"/>
+    <id>https://macherken.site.com/2020/05/15/dp2/</id>
+    <published>2020-05-15T01:28:50.000Z</published>
+    <updated>2020-05-15T01:37:43.115Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我画了一张图，里面几乎涵盖了所有数据结构和算法书籍中都会讲到的知识点。这里面有10个数据结构：数组、链表、栈、队列、散列表、二叉树、堆、跳表、图、Trie
+        
+      
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://macherken.site.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DP问题分类汇总</title>
+    <link href="https://macherken.site.com/2020/05/15/dp/"/>
+    <id>https://macherken.site.com/2020/05/15/dp/</id>
+    <published>2020-05-15T01:11:15.000Z</published>
+    <updated>2020-05-15T01:25:07.484Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;DP问题的分类&quot;&gt;&lt;a href=&quot;#DP问题的分类&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="https://macherken.site.com/categories/leetcode/"/>
+    
+    
+      <category term="leetcode" scheme="https://macherken.site.com/tags/leetcode/"/>
+    
+      <category term="DP" scheme="https://macherken.site.com/tags/DP/"/>
+    
+  </entry>
+  
+  <entry>
     <title>leetcode刷题</title>
     <link href="https://macherken.site.com/2020/05/13/leetcode10/"/>
     <id>https://macherken.site.com/2020/05/13/leetcode10/</id>
     <published>2020-05-13T13:16:46.000Z</published>
-    <updated>2020-05-13T13:22:24.269Z</updated>
+    <updated>2020-05-15T01:26:33.556Z</updated>
     
     <summary type="html">
     
@@ -421,149 +555,6 @@ import matplotlib.pyplot as plt&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;美颜&q
     
     
       <category term="opencv" scheme="https://macherken.site.com/tags/opencv/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>opencv入门二</title>
-    <link href="https://macherken.site.com/2020/05/13/opencv1/"/>
-    <id>https://macherken.site.com/2020/05/13/opencv1/</id>
-    <published>2020-05-13T03:08:48.000Z</published>
-    <updated>2020-05-13T03:53:13.409Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre&gt;&lt;code&gt;import tensorflow as ts
-import numpy as np
-import cv2
-# import matplotlib.pyplot as plt&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;方法一&quot;&gt;&lt;a href=&quot;#方法一&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="opencv" scheme="https://macherken.site.com/categories/opencv/"/>
-    
-    
-      <category term="opencv" scheme="https://macherken.site.com/tags/opencv/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>集成学习</title>
-    <link href="https://macherken.site.com/2020/05/13/ml10/"/>
-    <id>https://macherken.site.com/2020/05/13/ml10/</id>
-    <published>2020-05-13T02:59:56.000Z</published>
-    <updated>2020-05-13T03:51:39.127Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre&gt;&lt;code&gt;import numpy as np
-import matplotlib.pyplot as plt
-import warnings
-warnings.filterwarnings&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;from sklearn
-        
-      
-    
-    </summary>
-    
-      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
-    
-    
-      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LGB</title>
-    <link href="https://macherken.site.com/2020/05/13/ml9/"/>
-    <id>https://macherken.site.com/2020/05/13/ml9/</id>
-    <published>2020-05-13T02:54:10.000Z</published>
-    <updated>2020-05-13T03:51:15.460Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;C:%5CUsers%5CMachen%5CDesktop%5Chexo%5Chexo-matery-modified-master%5Csource_posts%5Cml9%5C1.png&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
-    
-    
-      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://macherken.site.com/2020/05/13/ml8/"/>
-    <id>https://macherken.site.com/2020/05/13/ml8/</id>
-    <published>2020-05-13T02:44:31.000Z</published>
-    <updated>2020-05-13T03:51:04.428Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;XGBoots&quot;&gt;&lt;a href=&quot;#XGBoots&quot; class=&quot;headerlink&quot; title=&quot;XGBoots&quot;&gt;&lt;/a&gt;XGBoots&lt;/h3&gt;&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
-    
-    
-      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>算法评价指标</title>
-    <link href="https://macherken.site.com/2020/05/13/ml7/"/>
-    <id>https://macherken.site.com/2020/05/13/ml7/</id>
-    <published>2020-05-13T02:42:06.000Z</published>
-    <updated>2020-05-13T03:50:42.895Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;pre&gt;&lt;code&gt;import numpy as np
-from math import sqrt
-
-
-def accuracy_score(y_true, y_predict):
-    &quot;&quot;&quot;计算y_true和y_predict之间的准确率&quot;&quot;&quot;
-    assert
-        
-      
-    
-    </summary>
-    
-      <category term="ml" scheme="https://macherken.site.com/categories/ml/"/>
-    
-    
-      <category term="ml" scheme="https://macherken.site.com/tags/ml/"/>
     
   </entry>
   
