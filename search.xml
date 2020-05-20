@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>李航&lt;统计学&gt;学习笔记</title>
+      <link href="/2020/05/20/li-hang-tong-ji-xue-xue-xi-bi-ji/"/>
+      <url>/2020/05/20/li-hang-tong-ji-xue-xue-xi-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h4 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h4><p>1，统计学习与机器学习是关于计算机基于数据结构构建概率统计模型并运用模型对数据进行分析和预测的一门学科。统计学包括监督学习，无监督学习和强化学习。</p><p>2，统计学习方法三要素——模型，策略，算法。</p><p>3，监督学习概括如下：从给定有限的训练 数据出发，假设数据是独立分布的，而且假设模型属于某个假设空间，应用某一评价准则，从假设空间中选取一个最优的模型，是它对已给训练 数据及未知测试数据在给定评价标准意义下有最准确的预测。</p><p>4，统计学习中，进行模型选择或者说提高学习的泛化能力是一个重要问题。如果只考虑减少训练误差，就可能产生过拟合现象。模型选择的方法有正则化和交叉验证。学习泛化能力的分析是统计学习理论研究的重要课题。</p><p>5，分类问题，标注问题和回归问题都是监督学习的重要问题。第一章介绍的统计学习方法包括感知机，k近邻，朴素贝叶斯，决策树，逻辑回归与最大熵模型，支持向量机，提升方法，EM算法，隐马尔科夫模型和条件随机场。这些方法是主要的分类，标注以及回归方法。他们又可以归类为生成方法与判别方法。</p><h4 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h4><p>1，说明伯努利模型的极大似然估计以及贝叶斯估计中的统计学三要素</p><p>1.1三要素分别是模型，策略，算法</p><p>模型，即定义在求值为0和1的随机变量上的概率分布</p><p>策略：极大似然估计与贝叶斯估计的策略都是损失函数，只不过贝叶斯使用的是结构化风险最小化。</p><p>算法：极大似然估计所使用的算法是求经验风险函数的极小值，贝叶斯使用求取参数经验的后验分布。然后计算其期望。定义为A取值为o或1的随机变量，并设A=1的概率是θ，</p><p>$$<br><em>P</em>(<em>A</em>=1)=<em>θ</em>,<em>P</em>(<em>A</em>=0)=1−<em>θ</em><br>$$<br>独立抽取n个同分布的随机变量A1,A2,……An。使用极大似然估计即求取以下经验风险函数的极值点：<br>$$<br><em>L</em>(<em>P</em>)=−<em>i</em>=1∑<em>n</em>log<em>P</em>(<em>A**i</em>)=−<em>k</em>log<em>θ</em>−(<em>n</em>−<em>k</em>)log(1−<em>θ</em>)<br>$$<br>即求θ，使得：<br>$$<br>∂<em>P</em>∂<em>L</em>(<em>P</em>)∣∣∣∣<em>θ</em>′=−<em>θ</em>′<em>k</em>−1−<em>θ</em>′<em>n</em>−<em>k</em>=0<br>$$<br>即得θ\thetaθ的估计值为θ=k/n</p><p>如果使用贝叶斯估计，则将A=1A=1A=1的概率θ\thetaθ也看做是一个随机变量，假设其先验分布为均匀分布，即：<br>$$<br><em>f</em>(<em>θ</em>)=1<br>$$<br>那么根据贝叶斯定理，其后验分布为：</p><p><em>f</em>(<em>θ</em>∣<em>A</em>1,…,<em>A**n</em>)=∫<em>f</em>(<em>A</em>1,…,<em>A**n</em>)⋅<em>f</em>(<em>θ</em>)d<em>θ**f</em>(<em>A</em>1,…,<em>A*<em>n</em>∣*θ</em>)⋅<em>f</em>(<em>θ</em>)</p><p>上式中分母与θ无关，所以可忽略，即：</p><p><em>f</em>(<em>θ</em>∣<em>A</em>1,…,<em>A**n</em>)∝<em>θ**k</em>(1−<em>θ</em>)(<em>n</em>−<em>k</em>)=<em>θ**k</em>+1−1(1−<em>θ</em>)<em>n</em>−<em>k</em>+1−1此时，如果想要最大化后验概率，即求θ使得f(<em>θ</em>|A1,…..An)最大，只需求解<em>θ</em>最终所求结果与最大似然估计法一样。</p><p>注意，我们还可以求解在均方（期望）意义下θ\thetaθ的值，事实上，参数为a,ba, ba,b的Beta分布的概率密度函数如下</p><p><em>f</em>(<em>p</em>;<em>a</em>,<em>b</em>)=Γ(<em>a</em>)Γ(<em>b</em>)Γ(<em>a</em>+<em>b</em>)<em>p*<em>a</em>−1(1−*p</em>)<em>b</em>−1</p><p>因此可以看出，θ\thetaθ的后验分布服从参数为k+1k+1k+1和n−k+1n-k+1n−k+1的Beta分布，即：</p><p><em>f</em>(<em>θ</em>∣<em>A</em>1,…,<em>A**n</em>)=Γ(<em>k</em>+1)Γ(<em>n</em>−<em>k</em>+1)Γ(<em>n</em>+2)<em>θ**k</em>+1−1(1−<em>θ</em>)<em>n</em>−<em>k</em>+1−1</p><p>因此，上式的期望（即θ\thetaθ的估计值）为：</p><p><em>E</em>(<em>θ</em>)=k+1/n+2</p><p>1.2证明：模型是条件概率分布，当损失函数是对数损失时，经验风险最小化等价于极大似然估计。</p><p>损失函数：度量模型一次预测的好坏</p><p>风险函数：度量平均意义下的模型预测好坏</p><p>首先需要理解几个概念，条件概率分布，对数损失，经验风险和极大似然估计</p><p>模型是条件概率分布，说明预测值：</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ml </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ml </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>分治法</title>
       <link href="/2020/05/15/fen-zhi-fa/"/>
       <url>/2020/05/15/fen-zhi-fa/</url>
@@ -47,9 +72,9 @@
       
         <tags>
             
-            <tag> leetcode </tag>
-            
             <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
             
         </tags>
       
@@ -999,9 +1024,9 @@
       
         <tags>
             
-            <tag> leetcode </tag>
-            
             <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
             
         </tags>
       
@@ -1026,9 +1051,9 @@
       
         <tags>
             
-            <tag> leetcode </tag>
-            
             <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
             
         </tags>
       
@@ -1053,9 +1078,9 @@
       
         <tags>
             
-            <tag> leetcode </tag>
-            
             <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
             
         </tags>
       
@@ -1080,9 +1105,9 @@
       
         <tags>
             
-            <tag> leetcode </tag>
-            
             <tag> 算法 </tag>
+            
+            <tag> leetcode </tag>
             
         </tags>
       
